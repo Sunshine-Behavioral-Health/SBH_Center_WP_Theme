@@ -299,7 +299,7 @@ if (is_home()) {
 	<!-- End Treatment Resources -->
 
 	<!-- STAFF -->
-	<?php get_template_part('template-parts/content/universal_staff'); ?>
+	<?php echo do_shortcode('[staff_home]'); ?>
 
 
 	<!-- Substance Information -->

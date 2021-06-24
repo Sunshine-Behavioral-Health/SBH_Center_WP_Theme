@@ -651,4 +651,21 @@ function accordions_with_toc()
 }
 
 add_shortcode('accordions_with_toc', 'accordions_with_toc');
- 
+
+function staff()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/staff');
+	return ob_get_clean();
+}
+
+add_shortcode('staff', 'staff');
+
+function staff_home()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/staff_home');
+	return ob_get_clean();
+}
+
+add_shortcode('staff_home', 'staff_home');
