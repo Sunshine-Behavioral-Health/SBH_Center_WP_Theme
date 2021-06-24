@@ -18,22 +18,6 @@ sbh_center()->print_styles('sbh_center-custom-page-nosidebar', 'sbh_center-conte
 
 ?>
 
-<?php if (get_field('has_google_translate')) : ?>
-    <div id="google_translate_element"></div>
-    <script>
-        function googleTranslateElementInit() {
-
-            new google.translate.TranslateElement({
-
-                pageLanguage: 'en'
-
-            }, 'google_translate_element');
-
-        }
-    </script>
-    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<?php endif; ?>
-
 
 <main id="primary" class="insurance_verification_page">
     <?php get_template_part('template-parts/heros/desktop_and_mobile_hero_full_width'); ?>
@@ -57,6 +41,5 @@ sbh_center()->print_styles('sbh_center-custom-page-nosidebar', 'sbh_center-conte
         </div>
     </div>
 </main>
-
 <?php
 get_footer();
