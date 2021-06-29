@@ -334,3 +334,11 @@ function wp_trim_excerpt_modified($text, $content_length = 55, $remove_breaks = 
 	}
 	return $text;
 }
+
+
+// Disables Gravity Forms from being able to generate posts:
+add_filter('gform_disable_post_creation', 'disable_post_creation', 10, 3);
+function disable_post_creation($is_disabled, $form, $entry)
+{
+	return true;
+}
