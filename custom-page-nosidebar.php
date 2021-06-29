@@ -53,9 +53,7 @@ sbh_center()->print_styles('sbh_center-content');
 				<?php echo get_field('content') ?>
 			</section>
 
-			<section class="page_disclosure_section">
-				<?php get_template_part('template-parts/content/pageDisclaimer'); ?>
-			</section>
+			<?php get_template_part('template-parts/content/pageDisclaimer'); ?>
 
 			<?php get_template_part('template-parts/content/phoneTreatmentCta'); ?>
 		</div>

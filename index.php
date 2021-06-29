@@ -38,9 +38,7 @@ sbh_center()->print_styles('sbh_center-content');
 	</div>
 	<?php get_sidebar(); ?>
 
-	<section class="page_disclosure_section">
-		<?php get_template_part('template-parts/content/pageDisclaimer'); ?>
-	</section>
+	<?php get_template_part('template-parts/content/pageDisclaimer'); ?>
 </main>
 
 
