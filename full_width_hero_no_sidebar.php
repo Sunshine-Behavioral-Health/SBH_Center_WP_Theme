@@ -26,7 +26,7 @@ $centerValue = get_field('center')
     <div class="content_container">
         <div class="page_wrapper">
             <!-- Page Content -->
-            <section class="page_content list_styling ipad_width_restriction">
+            <section class="page_content list_styling">
                 <?php get_template_part('template-parts/content/googleTranslate'); ?>
                 <?php echo get_field('content') ?>
             </section>

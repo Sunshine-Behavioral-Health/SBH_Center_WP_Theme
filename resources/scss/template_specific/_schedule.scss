@@ -1,23 +1,27 @@
-.scheudle_table_container table {
+.schedule_table_container table {
   border-collapse: collapse;
   width: 100%;
+  thead {
+    position: sticky;
+    top: 0;
+  }
 }
 
-.scheudle_table_container table td,
-.scheudle_table_container table th {
+.schedule_table_container table td,
+.schedule_table_container table th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-.scheudle_table_container table tr:nth-child(even) {
+.schedule_table_container table tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-.scheudle_table_container table tr:hover {
+.schedule_table_container table tr:hover {
   background-color: #ddd;
 }
 
-.scheudle_table_container table th {
+.schedule_table_container table th {
   padding-top: 12px;
   padding-bottom: 12px;
   background-color: #0075c9;
@@ -25,13 +29,13 @@
   text-align: center;
 }
 
-.scheudle_table_container tr {
+.schedule_table_container tr {
   height: 75px;
   border: 2px solid #999999;
 }
 
-.scheudle_table_container td,
-.scheudle_table_container th {
+.schedule_table_container td,
+.schedule_table_container th {
   min-width: 150px;
   width: 150px;
   border: 2px solid;
@@ -39,7 +43,7 @@
   border-color: #999999;
 }
 
-.scheudle_table_container th {
+.schedule_table_container th {
   background-color: #666;
   color: #fff;
   border-color: #999999;
@@ -79,13 +83,13 @@
 }
 
 @media (min-width: 1024px) {
-  .scheudle_table_container {
+  .schedule_table_container {
     max-height: 100%;
     overflow: auto;
   }
 }
 
-.scheudle_table_container {
+.schedule_table_container {
   max-height: 500px;
   overflow: auto;
 

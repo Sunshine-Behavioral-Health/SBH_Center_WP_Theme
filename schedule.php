@@ -35,17 +35,44 @@ get_template_part('template-parts/javascript/navigationJs');
 
 
 	<section class="page_content list_styling">
-		<div class="scheudle_table_container schedule_container">
-			<?php $table = get_field('schedule_table'); ?>
+		<div class="schedule_table_container schedule_container">
+			<?php $table = get_field('schedule_table');
+			if (!empty($table)) {
+				echo '<table >';
+				if (!empty($table['caption'])) {
+					echo '<caption>' . $table['caption'] . '</caption>';
+				}
+				if (!empty($table['header'])) {
+					echo '<thead>';
+					echo '<tr>';
+					foreach ($table['header'] as $th) {
+						echo '<th>';
+						echo $th['c'];
+						echo '</th>';
+					}
+					echo '</tr>';
+					echo '</thead>';
+				}
+				echo '<tbody>';
+				foreach ($table['body'] as $tr) {
+					echo '<tr>';
+					foreach ($tr as $td) {
+						echo '<td>';
+						echo $td['c'];
+						echo '</td>';
+					}
+					echo '</tr>';
+				}
+				echo '</tbody>';
+				echo '</table>';
+			} ?>
 		</div>
 	</section>
 
 	<?php get_template_part('template-parts/content/phoneTreatmentCta'); ?>
 
 
-	<section class="page_disclosure_section">
-		<?php get_template_part('template-parts/content/pageDisclaimer'); ?>
-	</section>
+	<?php get_template_part('template-parts/content/pageDisclaimer'); ?>
 </main>
 <?php
 get_footer();

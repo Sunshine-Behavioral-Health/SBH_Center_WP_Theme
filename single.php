@@ -16,8 +16,6 @@ sbh_center()->print_styles('sbh_center-content');
 
 //TOC
 get_template_part('template-parts/javascript/tableOfContents');
-
-
 ?>
 
 

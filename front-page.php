@@ -299,14 +299,14 @@ if (is_home()) {
 	<!-- End Treatment Resources -->
 
 	<!-- STAFF -->
-	<?php get_template_part('template-parts/content/universal_staff'); ?>
+	<?php echo do_shortcode('[staff_home]'); ?>
 
 
 	<!-- Substance Information -->
 	<section>
 		<div class="substance_bg" style="background-image: url(<?php echo get_field('substance_abuse_background_image')['url'] ?>)">
 			<h2 class="substance_headline"><?php echo get_field('substance_abuse_information_headline'); ?></h2>
-			<div class=" row substance_info_width">
+			<div class="row substance_info_width">
 				<?php
 				if (have_rows('substance_abuse_cards')) :
 					while (have_rows('substance_abuse_cards')) : the_row();
