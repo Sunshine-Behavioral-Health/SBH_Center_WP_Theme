@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Schedule+
+ * Template Name: Schedule
  * Template Post Type: Page
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
@@ -15,12 +15,9 @@ get_header();
 
 sbh_center()->print_styles('sbh_center-content');
 get_template_part('template-parts/javascript/navigationJs');
-
-
 ?>
 
-
-<main id="primary" class="maxWidth">
+<main id="primary" class="full_width_hero_no_sidebar">
 	<?php get_template_part('template-parts/heros/desktop_and_mobile_hero_full_width'); ?>
 
 	<div class="content_container">
@@ -38,5 +35,6 @@ get_template_part('template-parts/javascript/navigationJs');
 		</div>
 	</div>
 </main>
+
 <?php
 get_footer();
