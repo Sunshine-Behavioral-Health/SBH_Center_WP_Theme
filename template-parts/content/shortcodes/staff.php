@@ -1,3 +1,5 @@
+<?php get_template_part('template-parts/javascript/readBio'); ?>
+
 <section>
     <div class="staff_cards_container">
         <?php if (have_rows('staff_repeater', 'option')) :
