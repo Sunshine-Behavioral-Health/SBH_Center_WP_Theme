@@ -10,7 +10,7 @@
                 while (have_rows('recommendations-repeater')) : the_row();
                 ?>
                     <div class="recommendations_repeater_element">
-                        <a href="<?php esc_html(get_sub_field('link')['url']); ?>"><?php esc_html(get_sub_field('link')['title']); ?> <img src="<?php echo get_field('recommendations-arrow', 'option')['url'] ?>" alt=""></a>
+                        <a href="<?php get_sub_field('link') ?>"><?php get_sub_field('link_text') ?> <img src="<?php echo get_field('recommendations-arrow', 'option')['url'] ?>" alt=""></a>
                         <p><?php echo get_sub_field('subtext') ?></p>
                     </div>
                 <?php
