@@ -669,3 +669,13 @@ function staff_home()
 }
 
 add_shortcode('staff_home', 'staff_home');
+
+
+function recommendations()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/recommendations');
+	return ob_get_clean();
+}
+
+add_shortcode('recommendations', 'recommendations');
