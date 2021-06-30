@@ -10,6 +10,16 @@
       justify-content: space-around;
       .recommendations_repeater_element {
         flex: 0 1 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        a {
+          display: flex;
+          flex-direction: row;
+          color: var(--primary_color);
+          text-decoration: underline;
+          font-size: px;
+        }
       }
     }
   }
