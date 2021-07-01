@@ -10,8 +10,8 @@
 
         ?>
                 <p>TREATMENT STEP CAROUSEL</p>
-                <p><?php get_row_index(); ?></p>
-                <p><?php print_r($treatmentStepsRepeater) ?></p>
+                <p><?php echo get_row_index(); ?></p>
+                <p><?php echo print_r($treatmentStepsRepeater) ?></p>
         <?php
             endwhile;
         endif;
