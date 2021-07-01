@@ -6,13 +6,14 @@ $disa: hsl(226, 15%, 83%);
 
 .treatment_step_progress_bar_section {
   #steps {
-    width: 505px;
+    width: 75%;
     padding: 15px;
     overflow-x: auto;
     overflow-y: hidden;
     display: flex;
     flex-direction: row;
     padding-bottom: 30px;
+    margin: 0 auto;
   }
 
   .step {
@@ -30,7 +31,7 @@ $disa: hsl(226, 15%, 83%);
     &:first-child {
       line-height: 40px;
       img {
-        margin: 5px auto 0 auto;
+        margin: 2.5px auto 0 auto;
       }
     }
     &:nth-child(n + 2) {
