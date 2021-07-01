@@ -65,18 +65,16 @@ $disa: hsl(226, 15%, 83%);
         color: $blue;
       }
     }
-    img {
-      margin: 5px auto 0 auto;
-    }
-
     &.done {
       background-color: $green;
       border-color: $green;
-
       color: $white;
       &:before {
         background-color: $green;
       }
+    }
+    img {
+      margin: 5px auto 0 auto;
     }
   }
 }
