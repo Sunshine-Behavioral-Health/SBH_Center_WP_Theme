@@ -7,7 +7,11 @@ $disa: hsl(226, 15%, 83%);
 .treatment_step_progress_bar_section {
   #steps {
     width: 505px;
-    margin: 50px auto;
+    padding: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
   }
 
   .step {
