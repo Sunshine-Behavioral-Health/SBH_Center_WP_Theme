@@ -32,12 +32,3 @@ function treatment_step_progress_bar($atts)
 
 add_shortcode('treatment_step_progress_bar', 'treatment_step_progress_bar');
 ?>
-
-
-<!-- 
-    Add active class to specific index contingent on the attribute passed in via shortcode param
-
-    if "step" is equal to get_row_index() add the class "active"
-
-
- -->
