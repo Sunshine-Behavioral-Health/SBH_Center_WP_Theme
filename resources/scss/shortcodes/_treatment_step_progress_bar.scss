@@ -15,7 +15,6 @@ $disa: hsl(226, 15%, 83%);
     padding-bottom: 30px;
     margin: 0 auto;
   }
-
   .step {
     display: flex;
     flex-direction: column;
@@ -53,7 +52,6 @@ $disa: hsl(226, 15%, 83%);
       width: 150px;
       display: block;
       transform: translate(-55px, 3px);
-
       color: $grey;
       content: attr(data-desc);
       font-weight: 400;
@@ -62,26 +60,24 @@ $disa: hsl(226, 15%, 83%);
     &:first-child:after {
       transform: translate(-55px, -1px);
     }
-  }
-  .step.active {
-    border-color: $blue;
-
-    color: $blue;
-  }
-  .step.active:before {
-    background: linear-gradient(to right, $green 0%, $blue 100%);
-  }
-  .step.active:after {
-    color: $blue;
-  }
-  .step.done {
-    background-color: $green;
-    border-color: $green;
-
-    color: $white;
-  }
-  .step.done:before {
-    background-color: $green;
+    &.active {
+      border-color: $blue;
+      color: $blue;
+      &:before {
+        background: linear-gradient(to right, $green 0%, $blue 100%);
+      }
+      &:after {
+        color: $blue;
+      }
+      .done {
+        background-color: $green;
+        border-color: $green;
+        color: $green;
+        &:before {
+          background-color: $green;
+        }
+      }
+    }
   }
 }
 
