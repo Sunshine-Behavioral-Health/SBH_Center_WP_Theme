@@ -419,13 +419,3 @@ jQuery(document).ready(function (e) {
     // Image CTA Headline Sub Headline Two Buttons
 });
 
-$(document).ready(function () {
-    $('.step').each(function (index, element) {
-        // element == this
-        $(element).not('.active').addClass('done');
-        $('.done').html('<i class="icon-ok"></i>');
-        if ($(this).is('.active')) {
-            return false;
-        }
-    });
-});
