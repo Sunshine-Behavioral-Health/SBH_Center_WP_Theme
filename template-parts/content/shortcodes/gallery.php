@@ -7,8 +7,9 @@
                 $galleryItemWidth = get_sub_field('gallery_item_width');
                 $galleryItemHeight = get_sub_field('gallery_item_height');
         ?>
-                <div class="gallery_item_wrapper <?php echo get_sub_field('gallery_item_width');
-                                                    echo get_sub_field('gallery_item_height') ?>">
+                <div class="gallery_item_wrapper 
+                <?php echo get_sub_field('gallery_item_width'); ?> 
+                <?php echo get_sub_field('gallery_item_height') ?>">
                     <div class="gallery_item">
                         <img src="<?php echo get_sub_field('gallery_image')['url'] ?>" alt="">
                     </div>
