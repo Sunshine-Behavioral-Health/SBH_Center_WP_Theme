@@ -9,6 +9,11 @@ function treatment_step_progress_bar($atts)
     );
 ?>
 
+    <!-- 
+
+Sticky isn't working properly but all functionality done
+
+ -->
 <?php
     $output = '';
     $output .= '<section class="treatment_step_progress_bar_section">';

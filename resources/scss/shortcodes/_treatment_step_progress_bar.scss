@@ -9,8 +9,9 @@ $disa: hsl(226, 15%, 83%);
   top: 500px;
   left: 50%;
   transform: translate(-50%, 0);
+  width: 100%;
   #steps {
-    width: 90%;
+    width: 50%;
     padding: 15px;
     overflow-x: auto;
     overflow-y: hidden;
@@ -87,6 +88,10 @@ $disa: hsl(226, 15%, 83%);
 
 @media (min-width: 768px) {
   .treatment_step_progress_bar_section {
+    position: fixed;
+    top: 500px;
+    left: 50%;
+    transform: translate(-50%, 0);
     #steps {
       width: 75%;
     }
