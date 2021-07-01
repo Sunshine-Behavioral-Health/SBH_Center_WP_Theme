@@ -15,9 +15,8 @@ function treatment_step_progress_bar($atts)
     $output .= '<div class="treatment_step_progress_bar_container">';
     $output .= '<div id="steps">';
     if (have_rows('treatment_steps', 'option')) :
-        $treatmentStepNumber = get_row_index();
         while (have_rows('treatment_steps', 'option')) : the_row();
-            $treatmentStepNumber++;
+            $treatmentStepNumber = get_row_index();
             if ($treatmentStepNumber == $atts['step']) {
                 $output .= ' <div class="step active" data-desc="' . get_sub_field('step_name', 'option') . '">' . $treatmentStepNumber . '</div>';
             } else {
