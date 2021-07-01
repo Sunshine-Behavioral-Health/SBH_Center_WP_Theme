@@ -70,7 +70,7 @@ $disa: hsl(226, 15%, 83%);
         color: $blue;
       }
     }
-    .done {
+    &.done {
       background-color: $green;
       border-color: $green;
       color: $green;
