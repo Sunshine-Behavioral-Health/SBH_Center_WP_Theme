@@ -12,7 +12,7 @@
                 <?php echo get_sub_field('gallery_item_height') ?>">
                     <div class="gallery_item">
                         <div class="image">
-                            <img src="<?php echo get_sub_field('gallery_image')['url'] ?>" alt="">
+                            <img src="<?php echo get_sub_field('gallery_image')['url'] ?>" alt="" loading="lazy">
                         </div>
                     </div>
                 </div>

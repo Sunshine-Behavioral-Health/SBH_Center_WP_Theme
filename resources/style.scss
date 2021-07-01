@@ -85,6 +85,8 @@ This theme, like WordPress, is licensed under the GPL.
 @import "scss/shortcodes/accordion_with_toc";
 @import "scss/shortcodes/recommendations";
 @import "scss/shortcodes/gallery";
+@import "scss/shortcodes/treatment_step_progress_bar";
+@import "scss/shortcodes/treatment_step_carousel";
 
 // Very bottom css for specificity reasons
 .show {
