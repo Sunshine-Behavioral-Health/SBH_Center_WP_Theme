@@ -700,11 +700,4 @@ function treatment_step_carousel()
 add_shortcode('treatment_step_carousel', 'treatment_step_carousel');
 
 
-function treatment_step_progress_bar()
-{
-	ob_start();
-	get_template_part('template-parts/content/shortcodes/treatment_step_progress_bar');
-	return ob_get_clean();
-}
-
-add_shortcode('treatment_step_progress_bar', 'treatment_step_progress_bar');
+get_template_part('template-parts/content/shortcodes/treatment_step_progress_bar');
