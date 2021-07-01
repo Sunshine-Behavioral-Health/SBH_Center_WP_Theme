@@ -18,6 +18,7 @@
 
 <script>
     $(document).ready(function() {
+        console.log("inside treatment step script")
         $('.step').each(function(index, element) {
             // element == this
             $(element).not('.active').addClass('done');
@@ -25,6 +26,7 @@
             if ($(this).is('.active')) {
                 return false;
             }
+            console.log("end of for each in treatment step progress bar script")
         });
     });
 </script>
