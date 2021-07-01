@@ -28,11 +28,11 @@ $disa: hsl(226, 15%, 83%);
     font-weight: 600;
     text-align: center;
     line-height: 35px;
+    img {
+      margin: 2.5px auto 0 auto;
+    }
     &:first-child {
       line-height: 40px;
-      img {
-        margin: 2.5px auto 0 auto;
-      }
     }
     &:nth-child(n + 2) {
       margin: 0 0 0 75px;
@@ -62,29 +62,26 @@ $disa: hsl(226, 15%, 83%);
     &:first-child:after {
       transform: translate(-55px, -1px);
     }
+  }
+  .step.active {
+    border-color: $blue;
 
-    &.done {
-      background-color: $green;
-      border-color: $green;
-      color: $white;
-      &:before {
-        background-color: $green;
-      }
-    }
-    .active {
-      border-color: $blue;
-      color: $blue;
-      &:before {
-        background: linear-gradient(to right, $green 0%, $blue 100%);
-      }
-      &:after {
-        color: $blue;
-      }
-    }
+    color: $blue;
+  }
+  .step.active:before {
+    background: linear-gradient(to right, $green 0%, $blue 100%);
+  }
+  .step.active:after {
+    color: $blue;
+  }
+  .step.done {
+    background-color: $green;
+    border-color: $green;
 
-    img {
-      margin: 0 auto 0 auto;
-    }
+    color: $white;
+  }
+  .step.done:before {
+    background-color: $green;
   }
 }
 
