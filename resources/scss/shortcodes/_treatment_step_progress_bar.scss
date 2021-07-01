@@ -35,18 +35,19 @@ $disa: hsl(226, 15%, 83%);
       }
     }
     &:nth-child(n + 2) {
-      margin: 0 0 0 100px;
+      margin: 0 0 0 75px;
       transform: translate(0, -4px);
     }
     &:nth-child(n + 2):before {
       width: 75px;
       height: 3px;
       display: block;
-      background-color: $white;
+      background-color: #fff;
       transform: translate(-95px, 21px);
       content: "";
       border: 2px solid;
       margin-left: 16px;
+      margin-top: -5px;
     }
     &:after {
       width: 150px;
