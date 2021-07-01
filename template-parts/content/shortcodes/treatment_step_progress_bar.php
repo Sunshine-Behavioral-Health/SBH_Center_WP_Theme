@@ -17,7 +17,7 @@
 </section>
 
 <script>
-    $(document).ready(function() {
+    jQuery(document).ready(function($) {
         console.log("inside treatment step script")
         $('.step').each(function(index, element) {
             // element == this
