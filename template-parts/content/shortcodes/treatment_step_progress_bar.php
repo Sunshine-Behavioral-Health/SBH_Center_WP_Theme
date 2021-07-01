@@ -19,18 +19,5 @@
     </div>
 </section>
 
-<script>
-    $(document).ready(function() {
-        $('.step').each(function(index, element) {
-            // element == this
-            $(element).not('.active').addClass('done');
-            $('.done').html('<i class="icon-ok"></i>');
-            if ($(this).is('.active')) {
-                return false;
-            }
-        });
-    });
-</script>
-
 
 <!-- Shortcode with attributes that takes step="" as the param to determine where to add the active class. Sub -->
