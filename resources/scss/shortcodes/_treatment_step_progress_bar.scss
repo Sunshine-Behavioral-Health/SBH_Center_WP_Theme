@@ -69,13 +69,13 @@ $disa: hsl(226, 15%, 83%);
       &:after {
         color: $blue;
       }
-      .done {
+    }
+    .done {
+      background-color: $green;
+      border-color: $green;
+      color: $green;
+      &:before {
         background-color: $green;
-        border-color: $green;
-        color: $green;
-        &:before {
-          background-color: $green;
-        }
       }
     }
   }
