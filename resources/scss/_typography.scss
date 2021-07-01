@@ -299,15 +299,3 @@ input {
   white-space: nowrap !important;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-  margin-right: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--primary_color);
-}
