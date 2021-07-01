@@ -679,3 +679,13 @@ function recommendations()
 }
 
 add_shortcode('recommendations', 'recommendations');
+
+
+function gallery()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/gallery');
+	return ob_get_clean();
+}
+
+add_shortcode('gallery', 'gallery');
