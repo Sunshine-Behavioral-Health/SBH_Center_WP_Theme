@@ -4,10 +4,10 @@
         for (var i = 0; i < sliders.length; i++) {
             var glide = new Glide(sliders[i], {
                 perView: 1,
-                autoplay: 2500,
+                autoplay: 6000,
                 hoverpause: true,
                 keyboard: true,
-                animationDuration: 4000
+                animationDuration: 3000
             });
 
             glide.mount();
@@ -41,7 +41,7 @@
                         <?php endwhile; ?>
                     </ul>
                 </div>
-                <div class="glide__arrows" data-glide-el="controls">
+                <div class="glide__arrows treatment_step_carousel_arrows" data-glide-el="controls">
                     <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
                     <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
                 </div>

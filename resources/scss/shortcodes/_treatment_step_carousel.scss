@@ -44,6 +44,22 @@
         }
       }
     }
+    .treatment_step_carousel_arrows {
+      &.glide__arrows {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        button {
+          width: 77px;
+          height: 77px;
+          border-radius: 50%;
+          border: 1px solid #aca8ae;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
   }
 }
 
