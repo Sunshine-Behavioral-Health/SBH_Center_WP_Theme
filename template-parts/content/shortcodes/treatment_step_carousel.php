@@ -1,26 +1,51 @@
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        var sliders = document.querySelectorAll('.glide');
+        for (var i = 0; i < sliders.length; i++) {
+            var glide = new Glide(sliders[i], {
+                perView: 1,
+                autoplay: 2500,
+                hoverpause: true,
+                keyboard: true,
+                animationDuration: 4000
+            });
+
+            glide.mount();
+        }
+    });
+</script>
+
 <section class="treatment_step_carousel_section">
     <div class="treatment_step_carousel_container">
         <?php
         if (have_rows('treatment_steps', 'option')) :
         ?>
             <h2>Our Treatment Steps</h2>
-            <?php
-            while (have_rows('treatment_steps', 'option')) : the_row();
-            ?>
-                <div class="treatment_step_carousel_element">
-                    <div class="treatment_step_carousel_element_content">
-                        <h4><?php echo get_sub_field('step_subheadline', 'option') ?></h4>
-                        <h3><?php echo get_sub_field('step_headline', 'option') ?></h3>
-                        <p><?php echo get_sub_field('step_paragraph', 'option') ?></p>
-                        <a href="<?php echo get_sub_field('step_url', 'option') ?>"><?php echo get_sub_field('step_cta_text', 'option') ?><img src="<?php echo get_template_directory_uri() . '/icons/right_arrow.png' ?>" alt=""></a>
-                    </div>
-                    <div class="treatment_step_carousel_element_image">
-                        <img src="<?php echo get_sub_field('step_image', 'option')['url'] ?>" alt="">
-                    </div>
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <?php
+                        while (have_rows('treatment_steps', 'option')) : the_row();
+                        ?>
+                            <div class="treatment_step_carousel_element">
+                                <div class="treatment_step_carousel_element_content">
+                                    <h4><?php echo get_sub_field('step_subheadline', 'option') ?></h4>
+                                    <h3><?php echo get_sub_field('step_headline', 'option') ?></h3>
+                                    <p><?php echo get_sub_field('step_paragraph', 'option') ?></p>
+                                    <a href="<?php echo get_sub_field('step_url', 'option') ?>"><?php echo get_sub_field('step_cta_text', 'option') ?><img src="<?php echo get_template_directory_uri() . '/icons/right_arrow.png' ?>" alt=""></a>
+                                </div>
+                                <div class="treatment_step_carousel_element_image">
+                                    <img src="<?php echo get_sub_field('step_image', 'option')['url'] ?>" alt="">
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    </ul>
                 </div>
-        <?php
-            endwhile;
-        endif;
-        ?>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                </div>
+            </div>
+        <?php endif; ?>
     </div>
 </section>
