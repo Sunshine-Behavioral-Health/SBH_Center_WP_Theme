@@ -10,7 +10,7 @@ function treatment_step_progress_bar($atts)
 ?>
 
 <?php
-    $output = '';f
+    $output = '';
     $output .= '<section class="treatment_step_progress_bar_section">';
     $output .= '<div class="treatment_step_progress_bar_container">';
     $output .= '<div id="steps">';
