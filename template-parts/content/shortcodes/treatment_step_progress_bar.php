@@ -10,7 +10,7 @@ function treatment_step_progress_bar($atts)
 ?>
 
 <?php
-    $output = '';
+    $output = '';f
     $output .= '<section class="treatment_step_progress_bar_section">';
     $output .= '<div class="treatment_step_progress_bar_container">';
     $output .= '<div id="steps">';
@@ -18,7 +18,7 @@ function treatment_step_progress_bar($atts)
         while (have_rows('treatment_steps', 'option')) : the_row();
             $treatmentStepNumber = get_row_index();
             if ($treatmentStepNumber == $atts['step']) {
-                $output .= '<div  class="step active" data-desc="' . get_sub_field('step_name', 'option') . '">' . $treatmentStepNumber . '</div>';
+                $output .= '<div  class="step active" data-desc="' . get_sub_field('step_name', 'option') . '"><a href="' . get_sub_field('step_url', 'option') . '">' . $treatmentStepNumber . '</a></div>';
             } else {
                 $output .= '<div class="step" data-desc="' . get_sub_field('step_name', 'option') . '"><a href="' . get_sub_field('step_url', 'option') . '">' . $treatmentStepNumber . '</a></div>';
             }
