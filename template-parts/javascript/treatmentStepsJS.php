@@ -3,7 +3,7 @@
         $('.step').each(function(index, element) {
             // element == this
             $(element).not('.active').addClass('done');
-            $('.done').html('<img src="<?php echo get_template_directory_uri() . '/icons/checkmark_icon_white.png' ?>" >');
+            $('.done').html('<a href="<?php echo get_sub_field('step_url', 'option') ?>"><img src="<?php echo get_template_directory_uri() . '/icons/checkmark_icon_white.png' ?>" ></a>');
             if ($(this).is('.active')) {
                 return false;
             }
