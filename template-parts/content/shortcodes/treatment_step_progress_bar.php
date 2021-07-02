@@ -9,11 +9,6 @@ function treatment_step_progress_bar($atts)
     );
 ?>
 
-    <!-- 
-
-Sticky isn't working properly but all functionality done
-
- -->
 <?php
     $output = '';
     $output .= '<section class="treatment_step_progress_bar_section">';
@@ -25,7 +20,7 @@ Sticky isn't working properly but all functionality done
             if ($treatmentStepNumber == $atts['step']) {
                 $output .= '<div  class="step active" data-desc="' . get_sub_field('step_name', 'option') . '">' . $treatmentStepNumber . '</div>';
             } else {
-                $output .= '<div class="step" data-desc="' . get_sub_field('step_name', 'option') . '">' . $treatmentStepNumber . '</div>';
+                $output .= '<div class="step" data-desc="' . get_sub_field('step_name', 'option') . '"><a href="' . get_sub_field('step_url', 'option') . '">' . $treatmentStepNumber . '</a></div>';
             }
         endwhile;
     endif;

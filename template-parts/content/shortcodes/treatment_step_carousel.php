@@ -14,7 +14,7 @@
                         <p><?php echo get_sub_field('step_paragraph', 'option') ?></p>
                     </div>
                     <div class="treatment_step_carousel_element_image">
-                        <img src="<?php echo get_sub_field('step_image', 'option') ?>" alt="">
+                        <img src="<?php echo get_sub_field('step_image', 'option')['url'] ?>" alt="">
                     </div>
                 </div>
         <?php
