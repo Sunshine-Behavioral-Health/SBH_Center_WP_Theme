@@ -28,7 +28,7 @@
                         <a class="prev_arrow">&#10094;</a>
 
                     </div>
-                    <div class="treatment_step_carousel_button next" onclick="plusSlides(1)">
+                    <div class="treatment_step_carousel_button next">
                         <svg style="max-height:100px;" version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" xml:space="preserve">
                             <circle fill="none" stroke="#000" stroke-width="4" stroke-mitterlimit="0" cx="50" cy="50" r="48" stroke-dasharray="360" stroke-linecap="round" transform="rotate(-90 ) translate(-100 0)">
                                 <animate attributeName="stroke-dashoffset" values="360;0" dur="7s" repeatCount="indefinite"></animate>
@@ -48,42 +48,31 @@
 <script>
     let slideIndex = 0;
     let slides;
-    jQuery(document).ready(function($) {
 
-        showSlides();
+    const lastButton = document.getElementByClassName('last');
+    const nextButton = document.getElementByClassName('next');
 
-        $(".prev").on('click', () => {
-            plusSlides(-1)
-            console.log("clicked prev")
-        });
-        // $(".next").on('click', () => {
-        //     console.log("clicked next button")
-        //     plusSlides(2)
-        //     console.log("end of next")
-        // });
 
-        function showSlides() {
-            let i;
-            slides = $(".treatment_step_carousel_element");
+    showSlides();
 
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1
-            }
-            slides[slideIndex - 1].style.display = "flex";
+    lastButton.addEventListener("click", plusSlides(-1), false);
+    nextButton.addEventListener("click", plusSlides(1), false);
 
-            // Controls time on each slide 
-            setTimeout(showSlides, 7000);
+    function showSlides() {
+        var i;
+        slides = document.getElementsByClassName("treatment_step_carousel_element");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
         }
-
-
-    });
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "flex";
+        setTimeout(showSlides, 7000);
+    }
 
     function plusSlides(position) {
-        console.log("inside plusSlides function")
         slideIndex += position;
         if (slideIndex > slides.length) {
             slideIndex = 1
@@ -94,7 +83,5 @@
             slides[i].style.display = "none";
         }
         slides[slideIndex - 1].style.display = "flex";
-
-        console.log("end of plus slides function")
     }
 </script>
