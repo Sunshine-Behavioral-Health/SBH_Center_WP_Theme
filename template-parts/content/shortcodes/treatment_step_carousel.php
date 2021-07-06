@@ -71,4 +71,11 @@
         }
         slides[slideIndex - 1].style.display = "block";
     }
+
+    function reset_animation() {
+        var el = document.getElementsByClassName('treatment_step_carousel_button');
+        el.style.animation = 'none';
+        el.offsetHeight; /* trigger reflow */
+        el.style.animation = null;
+    }
 </script>
