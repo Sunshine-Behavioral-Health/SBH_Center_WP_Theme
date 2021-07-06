@@ -44,3 +44,12 @@
     </div>
 <?php endif; ?>
 </section>
+
+<script>
+    jQuery(document).ready(function($) {
+        $('.treatment_step_carousel_button').on("click", () => {
+            console.log("treatment step carousel button was clicked")
+        })
+
+    });
+</script>
