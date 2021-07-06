@@ -3,8 +3,8 @@ jQuery(document).ready(function ($) {
     let slides;
     showSlides();
 
-    $(".treatment_step_last").on('click', plusSlides(-1));
-    $(".treatment_step_next").on('click', plusSlides(1));
+    $(".prev").on('click', plusSlides(-1));
+    $(".next").on('click', plusSlides(1));
 
     function showSlides() {
         console.log("top of showSlides")

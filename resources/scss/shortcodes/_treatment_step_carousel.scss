@@ -86,24 +86,17 @@
     .treatment_step_carousel_button {
       position: relative;
       width: 100px;
-      &:hover {
-        svg {
-          fill: red;
-        }
-      }
     }
   }
-
-  .prev,
-  .next {
+  .prev_arrow,
+  .next_arrow {
     cursor: pointer;
     position: absolute;
-    top: 50%;
+    top: 42.5%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: auto;
-    padding: 5px 0 0 0;
-    margin-top: -22px;
+    padding: 0;
     color: #000;
     font-weight: bold;
     font-size: 25px;
