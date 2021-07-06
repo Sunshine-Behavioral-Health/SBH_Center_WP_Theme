@@ -44,20 +44,7 @@
                 <div class="glide__arrows treatment_step_carousel_arrows" data-glide-el="controls">
                     <div class="circular">
                         <div class="inner"></div>
-                        <div class="number">left</div>
-                        <div class="circle">
-                            <div class="bar left">
-                                <div class="progress"></div>
-                            </div>
-                            <div class="bar right">
-                                <div class="progress"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="circular">
-                        <div class="inner"></div>
-                        <div class="number">right</div>
+                        <div class="number">next</div>
                         <div class="circle">
                             <div class="bar left">
                                 <div class="progress"></div>
