@@ -20,7 +20,7 @@
                     </div>
                 <?php endwhile; ?>
 
-                <div class="treatment_step_carousel_buttons prev" onclick="(plusSlides(-1))">
+                <div class="treatment_step_carousel_buttons prev" onclick="(plusSlides(-1)); reset_animation();">
                     <div class="treatment_step_carousel_button">
                         <svg style="max-height:100px;" version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" xml:space="preserve">
                             <circle cx="50" cy="50" r="40" stroke="grey" stroke-width="3" fill="none" />
@@ -28,7 +28,7 @@
                         <a class="prev_arrow">&#10094;</a>
 
                     </div>
-                    <div class="treatment_step_carousel_button next" onclick="(plusSlides(1))">
+                    <div class="treatment_step_carousel_button next" onclick="(plusSlides(1)); reset_animation();">
                         <svg style="max-height:100px;" version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" xml:space="preserve">
                             <circle fill="none" stroke="#000" stroke-width="4" stroke-mitterlimit="0" cx="50" cy="50" r="48" stroke-dasharray="360" stroke-linecap="round" transform="rotate(-90 ) translate(-100 0)">
                                 <animate attributeName="stroke-dashoffset" values="360;0" dur="7s" repeatCount="indefinite"></animate>
@@ -44,34 +44,31 @@
 </section>
 
 <script>
-    var slideIndex = 0;
-    var slides;
-    showSlides();
+    var slideIndex = 1;
+    showSlides(slideIndex);
 
-    function plusSlides(position) {
-        slideIndex += position;
-        if (slideIndex > slides.length) {
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        const slides = document.getElementsByClassName("treatment_step_carousel_element");
+        if (n > slides.length) {
             slideIndex = 1
-        } else if (slideIndex < 1) {
+        }
+        if (n < 1) {
             slideIndex = slides.length
         }
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        slides[slideIndex - 1].style.display = "flex";
-    }
-
-    function showSlides() {
-        var i;
-        slides = document.getElementsByClassName("treatment_step_carousel_element");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-            slideIndex = 1
-        }
-        slides[slideIndex - 1].style.display = "flex";
-        setTimeout(showSlides, 7000); // Change image every 3 seconds
+        slides[slideIndex - 1].style.display = "block";
     }
 </script>
