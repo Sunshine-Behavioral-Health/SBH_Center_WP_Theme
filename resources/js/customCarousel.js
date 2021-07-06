@@ -3,8 +3,8 @@ jQuery(document).ready(function ($) {
     let slides;
     showSlides();
 
-    $(".custom_carousel .prev").on('click', plusSlides(-1));
-    $(".custom_carousel .next").on('click', plusSlides(1));
+    $(".prev").on('click', plusSlides(-1));
+    $(".next").on('click', plusSlides(1));
 
     function showSlides() {
         console.log("top of showSlides")
@@ -27,6 +27,7 @@ jQuery(document).ready(function ($) {
 
     // used onclick
     function plusSlides(position) {
+        console.log("button was clicked")
         slideIndex += position;
         if (slideIndex > slides.length) {
             slideIndex = 1
