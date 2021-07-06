@@ -1,20 +1,3 @@
-<script type="text/javascript">
-    jQuery(document).ready(function($) {
-        var sliders = document.querySelectorAll('.glide');
-        for (var i = 0; i < sliders.length; i++) {
-            var glide = new Glide(sliders[i], {
-                perView: 1,
-                autoplay: 6000,
-                hoverpause: true,
-                keyboard: true,
-                animationDuration: 2000
-            });
-
-            glide.mount();
-        }
-    });
-</script>
-
 <section class="treatment_step_carousel_section">
     <div class="treatment_step_carousel_container custom_carousel">
         <?php
@@ -35,14 +18,6 @@
                             <img src="<?php echo get_sub_field('step_image', 'option')['url'] ?>" alt="">
                         </div>
                     </div>
-                    <div style="text-align:center">
-                        <?php
-                        while (have_rows('treatment_steps', 'option')) : the_row();
-                            $currentSlideIndex = get_row_index();
-                        ?>
-                            <span class="dot" onclick="currentSlide(<?php echo $currentSlideIndex ?>)"></span>
-                        <?php endwhile; ?>
-                    </div>
                 <?php endwhile; ?>
 
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -55,3 +30,57 @@
     </div>
 <?php endif; ?>
 </section>
+
+
+<script>
+    jQuery(document).ready(function($) {
+        let slideIndex = 0;
+        showSlides();
+        let slides;
+
+        function showSlides() {
+            console.log("top of showSlides")
+            let i;
+            slides = $(".treatment_step_carousel_element");
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            slides[slideIndex - 1].style.display = "block";
+
+            // Controls time on each slide 
+            setTimeout(showSlides, 7000);
+            console.log("end of show slides")
+        }
+
+        // used onclick
+        function plusSlides(position) {
+            slideIndex += position;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            } else if (slideIndex < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        function currentSlide(index) {
+            if (index > slides.length) {
+                index = 1
+            } else if (index < 1) {
+                index = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[index - 1].style.display = "block";
+        }
+    });
+</script>
