@@ -32,21 +32,29 @@
         // Carousel
         var slideIndex = 0;
         showSlides();
-        var slides;
+        var slides, dots;
 
         function showSlides() {
+            console.log("top of showSlides")
             var i;
             slides = document.getElementsByClassName("treatment_step_carousel_element");
-
+            dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
             slideIndex++;
             if (slideIndex > slides.length) {
                 slideIndex = 1
             }
-
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
             slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
 
-            // Controls how long between each slide change
+            // Controls time on each slide 
             setTimeout(showSlides, 7000);
+            console.log("end of show slides")
         }
 
         function plusSlides(position) {
@@ -59,8 +67,11 @@
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
-
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
             slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
         }
 
         function currentSlide(index) {
@@ -72,7 +83,11 @@
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
             slides[index - 1].style.display = "block";
+            dots[index - 1].className += " active";
         }
 
     });
