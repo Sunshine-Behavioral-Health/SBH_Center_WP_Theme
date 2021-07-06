@@ -73,64 +73,62 @@
     width: 100px;
     position: relative;
     transform: scale(2);
-  }
-  .circular .inner {
-    position: absolute;
-    z-index: 6;
-    top: 50%;
-    left: 50%;
-    height: 80px;
-    width: 80px;
-    margin: -40px 0 0 -40px;
-    background: #dde6f0;
-    border-radius: 100%;
-  }
-  .circular .number {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    font-size: 18px;
-    font-weight: 500;
-    color: #4158d0;
-  }
-  .circular .bar {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: #fff;
-    -webkit-border-radius: 100%;
-    clip: rect(0px, 100px, 100px, 50px);
-  }
-  .circle .bar .progress {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    -webkit-border-radius: 100%;
-    clip: rect(0px, 50px, 100px, 0px);
-    background: #4158d0;
-  }
-  @keyframes left {
-    100% {
-      transform: rotate(180deg);
+
+    .inner {
+      position: absolute;
+      z-index: 6;
+      top: 50%;
+      left: 50%;
+      height: 80px;
+      width: 80px;
+      margin: -40px 0 0 -40px;
+      background: #dde6f0;
+      border-radius: 100%;
+    }
+    .number {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      font-size: 18px;
+      font-weight: 500;
+      color: #4158d0;
+    }
+    .bar {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: #fff;
+      -webkit-border-radius: 100%;
+      clip: rect(0px, 100px, 100px, 50px);
+      .progress {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        -webkit-border-radius: 100%;
+        clip: rect(0px, 50px, 100px, 0px);
+        background: #4158d0;
+      }
+    }
+    .right {
+      transform: rotate(360deg);
+      z-index: 3;
+      .progress {
+        animation: right 6s linear both;
+        animation-delay: 6s;
+        animation-iteration-count: infinite;
+      }
     }
   }
-  .circle .right {
-    transform: rotate(180deg);
-    z-index: 3;
-  }
-  .circle .right .progress {
-    animation: right 6s linear both;
-    animation-delay: 6s;
-    animation-iteration-count: infinite;
-  }
+
   @keyframes right {
     100% {
-      transform: rotate(180deg);
+      transform: rotate(360deg);
     }
   }
 }
+
 @media (min-width: 768px) {
   .treatment_step_carousel_section {
     .treatment_step_carousel_container {
