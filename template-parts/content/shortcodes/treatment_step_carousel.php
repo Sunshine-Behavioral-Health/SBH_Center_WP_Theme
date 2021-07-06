@@ -20,8 +20,8 @@
                     </div>
                 <?php endwhile; ?>
 
-                <div class="treatment_step_carousel_buttons prev" onclick="(plusSlides(-1)); reset_animation();">
-                    <div class="treatment_step_carousel_button">
+                <div class="treatment_step_carousel_buttons prev">
+                    <div class="treatment_step_carousel_button" onclick="(plusSlides(-1)); reset_animation();">
                         <svg style="max-height:100px;" version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" xml:space="preserve">
                             <circle cx="50" cy="50" r="40" stroke="grey" stroke-width="3" fill="none" />
                         </svg>
@@ -73,9 +73,7 @@
     }
 
     function reset_animation() {
-        var el = document.getElementsByClassName('treatment_step_carousel_button');
-        el.style.animation = 'none';
-        el.offsetHeight; /* trigger reflow */
-        el.style.animation = null;
+        document.querySelector('animate').beginElement();
+        console.log("animation has been reset")
     }
 </script>
