@@ -71,7 +71,6 @@
             slides[i].style.display = "none";
         }
         slides[slideIndex - 1].style.display = "flex";
-        setTimeout(showSlides(slideIndex++), 3000);
     }
 
     function reset_animation() {
