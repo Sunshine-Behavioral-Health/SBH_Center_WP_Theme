@@ -42,18 +42,11 @@
                     </ul>
                 </div>
                 <div class="glide__arrows treatment_step_carousel_arrows" data-glide-el="controls">
-                    <div class="circular">
-                        <div class="inner"></div>
-                        <div class="number glide__arrow glide__arrow--right" data-glide-dir=">">next</div>
-                        <div class="circle">
-                            <div class="bar left">
-                                <div class="progress"></div>
-                            </div>
-                            <div class="bar right">
-                                <div class="progress"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" xml:space="preserve">
+                        <circle fill="none" stroke="#000" stroke-width="4" stroke-mitterlimit="0" cx="50" cy="50" r="48" stroke-dasharray="360" stroke-linecap="round" transform="rotate(-90 ) translate(-100 0)">
+                            <animate attributeName="stroke-dashoffset" values="360;0" dur="6s" repeatCount="indefinite"></animate>
+                        </circle>
+                    </svg>
 
                     <button class="glide__arrow glide__arrow--left" data-glide-dir="<">last</button>
                 </div>
