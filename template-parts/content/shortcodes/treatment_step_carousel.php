@@ -51,8 +51,15 @@
         let slides;
         showSlides();
 
-        $(".prev").on('click', plusSlides(-1));
-        $(".next").on('click', plusSlides(1));
+        $(".prev").on('click', () => {
+            console.log("clicked last button")
+
+            plusSlides(-1)
+        });
+        $(".next").on('click', () => {
+            console.log("clicked next button")
+            plusSlides(1)
+        });
 
         function showSlides() {
             let i;
@@ -72,7 +79,7 @@
         }
 
         function plusSlides(position) {
-            console.log("button was clicked")
+            console.log("inside plusSlides function")
             slideIndex += position;
             if (slideIndex > slides.length) {
                 slideIndex = 1
