@@ -42,6 +42,7 @@
                     </ul>
                 </div>
                 <div class="glide__arrows treatment_step_carousel_arrows" data-glide-el="controls">
+
                     <div class="circular">
                         <div class="inner"></div>
                         <div class="number">100%</div>
@@ -55,21 +56,8 @@
                         </div>
                     </div>
 
-                    <div class="circular">
-                        <div class="inner"></div>
-                        <div class="number"><button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button></div>
-                        <div class="circle">
-                            <div class="bar left">
-                                <div class="progress"></div>
-                            </div>
-                            <div class="bar right">
-                                <div class="progress"></div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir=">">last</button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
                 </div>
             </div>
         <?php endif; ?>
