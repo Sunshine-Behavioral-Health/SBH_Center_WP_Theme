@@ -35,6 +35,14 @@
                             <img src="<?php echo get_sub_field('step_image', 'option')['url'] ?>" alt="">
                         </div>
                     </div>
+                    <div style="text-align:center">
+                        <?php
+                        while (have_rows('treatment_steps', 'option')) : the_row();
+                            $currentSlideIndex = get_row_index();
+                        ?>
+                            <span class="dot" onclick="currentSlide(<?php echo $currentSlideIndex ?>)"></span>
+                        <?php endwhile; ?>
+                    </div>
                 <?php endwhile; ?>
 
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a>
