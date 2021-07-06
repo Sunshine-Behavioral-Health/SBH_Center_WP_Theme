@@ -38,8 +38,6 @@
                         <a class="next_arrow">&#10095;</a>
                     </div>
                 </div>
-                <span class="dot" onclick="currentSlide(1)"></span>
-
             </div>
     </div>
 <?php endif; ?>
@@ -47,7 +45,7 @@
 
 <script>
     var slideIndex = 0;
-    var slides, dots;
+    var slides;
     showSlides();
 
     function plusSlides(position) {
@@ -60,34 +58,12 @@
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-
-        }
         slides[slideIndex - 1].style.display = "flex";
-        dots[slideIndex - 1].className += " active";
-    }
-
-    function currentSlide(index) {
-        if (index > slides.length) {
-            index = 1
-        } else if (index < 1) {
-            index = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[index - 1].style.display = "flex";
-        dots[index - 1].className += " active";
     }
 
     function showSlides() {
         var i;
         slides = document.getElementsByClassName("treatment_step_carousel_element");
-        dots = document.getElementsByClassName("dot");
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
@@ -95,11 +71,7 @@
         if (slideIndex > slides.length) {
             slideIndex = 1
         }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
         slides[slideIndex - 1].style.display = "flex";
-        dots[slideIndex - 1].className += " active";
         setTimeout(showSlides, 7000); // Change image every 3 seconds
     }
 </script>
