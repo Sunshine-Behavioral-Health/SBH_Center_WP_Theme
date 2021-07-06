@@ -90,6 +90,8 @@
                 slides[i].style.display = "none";
             }
             slides[slideIndex - 1].style.display = "flex";
+
+            console.log("end of plus slides function")
         }
     });
 </script>
