@@ -59,7 +59,8 @@
 
     function showSlides(n) {
         let i;
-        const slides = document.getElementsByClassName("treatment_step_carousel_element");
+        let slides = document.getElementsByClassName("treatment_step_carousel_element");
+        console.log("elements I want", slides)
         if (n > slides.length) {
             slideIndex = 1
         }
@@ -70,7 +71,7 @@
             slides[i].style.display = "none";
         }
         slides[slideIndex - 1].style.display = "flex";
-        setTimeout(showSlides(slideIndex++), 3000); // Change image every 2 seconds
+        setTimeout(showSlides(slideIndex++), 3000);
     }
 
     function reset_animation() {
