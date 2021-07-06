@@ -114,8 +114,8 @@
       transform: rotate(180deg);
       z-index: 3;
       .progress {
-        animation: right 4s linear both;
-        animation-delay: 4s;
+        animation: right 6s linear both infinite;
+        animation-delay: 0;
       }
     }
   }
