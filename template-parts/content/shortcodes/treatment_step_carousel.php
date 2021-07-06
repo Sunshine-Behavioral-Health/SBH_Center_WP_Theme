@@ -46,9 +46,10 @@
 </section>
 
 <script>
+    let slideIndex = 0;
+    let slides;
     jQuery(document).ready(function($) {
-        let slideIndex = 0;
-        let slides;
+
         showSlides();
 
         $(".prev").on('click', () => {
