@@ -49,8 +49,8 @@
     let slideIndex = 0;
     let slides;
 
-    const lastButton = document.getElementByClassName('last');
-    const nextButton = document.getElementByClassName('next');
+    const lastButton = document.getElementsByClassName('last');
+    const nextButton = document.getElementsByClassName('next');
 
 
     showSlides();
