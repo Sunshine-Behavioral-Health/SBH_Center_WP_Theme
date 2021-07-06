@@ -47,8 +47,8 @@
 
 <script>
     var slideIndex = 0;
-    showSlides();
     var slides, dots;
+    showSlides();
 
     function plusSlides(position) {
         slideIndex += position;
