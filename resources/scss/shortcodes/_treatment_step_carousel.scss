@@ -111,7 +111,6 @@
       }
     }
     .right {
-      transform: rotate(180deg);
       z-index: 3;
       .progress {
         animation: right 6s linear both infinite;
@@ -145,9 +144,9 @@
 // Animations
 @keyframes right {
   0% {
-    transform: rotate(0deg) translate(-165px) rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg) translate(-165px) rotate(-360deg);
+    transform: rotate(360deg);
   }
 }
