@@ -57,19 +57,19 @@
         showSlides(slideIndex = n);
     }
 
-    function showSlides(n) {
+
+    function showSlides() {
         let i;
         const slides = document.getElementsByClassName("treatment_step_carousel_element");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        slides[slideIndex - 1].style.display = "block";
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "flex";
+        setTimeout(showSlides, 7000); // Change image every 2 seconds
     }
 
     function reset_animation() {
