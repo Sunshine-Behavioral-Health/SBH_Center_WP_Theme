@@ -111,7 +111,7 @@
       }
     }
     .right {
-      transform: rotate(360deg);
+      transform: rotate(180deg);
       z-index: 3;
       .progress {
         animation: right 6s linear both infinite;
