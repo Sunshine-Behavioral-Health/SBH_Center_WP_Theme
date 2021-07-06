@@ -36,19 +36,7 @@ jQuery(document).ready(function ($) {
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        slides[slideIndex - 1].style.display = "block";
-    }
-
-    function currentSlide(index) {
-        if (index > slides.length) {
-            index = 1
-        } else if (index < 1) {
-            index = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slides[index - 1].style.display = "block";
+        slides[slideIndex - 1].style.display = "flex";
     }
 });
 

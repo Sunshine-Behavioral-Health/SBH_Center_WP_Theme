@@ -21,7 +21,7 @@ jQuery(document).ready(function ($) {
         slides[slideIndex - 1].style.display = "flex";
 
         // Controls time on each slide 
-        setTimeout(showSlides, 6800);
+        setTimeout(showSlides, 7000);
         console.log("end of show slides")
     }
 
@@ -36,18 +36,6 @@ jQuery(document).ready(function ($) {
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        slides[slideIndex - 1].style.display = "block";
-    }
-
-    function currentSlide(index) {
-        if (index > slides.length) {
-            index = 1
-        } else if (index < 1) {
-            index = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slides[index - 1].style.display = "block";
+        slides[slideIndex - 1].style.display = "flex";
     }
 });

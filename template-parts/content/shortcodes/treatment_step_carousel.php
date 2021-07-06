@@ -22,9 +22,8 @@
                 <div class="treatment_step_carousel_button">
                     <svg style="max-height:100px;" version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" xml:space="preserve">
                         <circle cx="50" cy="50" r="40" stroke="grey" stroke-width="3" fill="none" />
+                        <a class="prev">&#10094;</a>
                     </svg>
-                    <a class="prev">&#10094;</a>
-
                 </div>
                 <div class="treatment_step_carousel_button">
                     <svg style="max-height:100px;" version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" xml:space="preserve">
@@ -32,9 +31,8 @@
                             <animate attributeName="stroke-dashoffset" values="360;0" dur="7s" repeatCount="indefinite"></animate>
                         </circle>
                         <circle cx="50" cy="50" r="40" stroke="grey" stroke-width="3" fill="none" />
+                        <a class="next">&#10095;</a>
                     </svg>
-                    <a class="next">&#10095;</a>
-
                 </div>
             </div>
     </div>
