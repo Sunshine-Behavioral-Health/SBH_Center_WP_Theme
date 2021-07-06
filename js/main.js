@@ -21,7 +21,7 @@ jQuery(document).ready(function ($) {
         slides[slideIndex - 1].style.display = "flex";
 
         // Controls time on each slide 
-        setTimeout(showSlides, 6800);
+        setTimeout(showSlides, 7000);
         console.log("end of show slides")
     }
 

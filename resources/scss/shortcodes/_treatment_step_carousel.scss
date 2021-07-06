@@ -80,10 +80,15 @@
     margin: -10px;
   }
 
-  .treatment_step_carousel_button {
-    position: relative;
-    width: 100px;
+  .treatment_step_carousel_buttons {
+    display: flex;
+    flex-direction: row;
+    .treatment_step_carousel_button {
+      position: relative;
+      width: 100px;
+    }
   }
+
   .prev,
   .next {
     cursor: pointer;
