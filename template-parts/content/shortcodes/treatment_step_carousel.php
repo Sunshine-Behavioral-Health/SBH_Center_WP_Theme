@@ -35,8 +35,8 @@
 <script>
     jQuery(document).ready(function($) {
         let slideIndex = 0;
-        showSlides();
         let slides;
+        showSlides();
 
         function showSlides() {
             console.log("top of showSlides")
