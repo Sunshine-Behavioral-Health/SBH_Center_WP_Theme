@@ -101,25 +101,31 @@
       background: #fff;
       -webkit-border-radius: 100%;
       clip: rect(0px, 100px, 100px, 50px);
-      .progress {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        -webkit-border-radius: 100%;
-        clip: rect(0px, 50px, 100px, 0px);
-        background: #4158d0;
-      }
     }
-    .right {
+  }
+
+  .circle .bar .progress {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-border-radius: 100%;
+    clip: rect(0px, 50px, 100px, 0px);
+    background: #4158d0;
+  }
+  .circle .left .progress {
+    z-index: 1;
+    animation: left 3s linear both;
+
+    .circle .right {
+      transform: rotate(180deg);
       z-index: 3;
-      .progress {
-        animation: right 6s linear both infinite;
-        animation-delay: 0;
-      }
+    }
+    .circle .right .progress {
+      animation: right 3s linear both;
+      animation-delay: 3s;
     }
   }
 }
-
 @media (min-width: 768px) {
   .treatment_step_carousel_section {
     .treatment_step_carousel_container {
@@ -141,15 +147,14 @@
   }
 }
 
-// Animations
-@keyframes right {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(360deg);
-  }
+// Animations:
+@keyframes left {
   100% {
-    transform: rotate(720deg);
+    transform: rotate(180deg);
+  }
+}
+@keyframes right {
+  100% {
+    transform: rotate(180deg);
   }
 }
