@@ -44,8 +44,8 @@
 </section>
 
 <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
+    var slideIndex = 0;
+    showSlides();
 
     // Next/previous controls
     function plusSlides(n) {
