@@ -57,7 +57,7 @@
 
                     <div class="circular">
                         <div class="inner"></div>
-                        <div class="number">100%</div>
+                        <div class="number"><button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button></div>
                         <div class="circle">
                             <div class="bar left">
                                 <div class="progress"></div>
@@ -69,7 +69,7 @@
                     </div>
 
 
-                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+
                 </div>
             </div>
         <?php endif; ?>
