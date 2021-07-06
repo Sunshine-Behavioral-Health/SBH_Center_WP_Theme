@@ -73,7 +73,6 @@
     width: 100px;
     position: relative;
     transform: scale(2);
-
     .inner {
       position: absolute;
       z-index: 6;
@@ -112,19 +111,12 @@
       }
     }
     .right {
-      transform: rotate(360deg);
+      transform: rotate(180deg);
       z-index: 3;
       .progress {
-        animation: right 6s linear both;
-        animation-delay: 6s;
-        animation-iteration-count: infinite;
+        animation: right 4s linear both;
+        animation-delay: 4s;
       }
-    }
-  }
-
-  @keyframes right {
-    100% {
-      transform: rotate(360deg);
     }
   }
 }
@@ -147,5 +139,12 @@
         }
       }
     }
+  }
+}
+
+// Animations
+@keyframes right {
+  100% {
+    transform: rotate(180deg);
   }
 }
