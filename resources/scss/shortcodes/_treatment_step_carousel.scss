@@ -79,7 +79,10 @@
     position: relative;
     margin: -10px;
   }
-  /* Next & previous buttons */
+
+  .treatment_step_carousel_button {
+    position: relative;
+  }
   .prev,
   .next {
     cursor: pointer;
@@ -94,28 +97,15 @@
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
   }
-  /* Position the "next button" to the right */
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
-  /* On hover, add a black background color with a little bit see-through */
   .prev:hover,
   .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
-  /* Caption text */
-  .text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-  }
 
-  /* Fading animation */
   .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 2s;
@@ -137,13 +127,6 @@
     }
     to {
       opacity: 1;
-    }
-  }
-
-  /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
-    .text {
-      font-size: 11px;
     }
   }
 }
