@@ -70,7 +70,7 @@
             slides[i].style.display = "none";
         }
         slides[slideIndex - 1].style.display = "flex";
-        setTimeout(showSlides, 3000); // Change image every 2 seconds
+        setTimeout(showSlides(slideIndex++), 3000); // Change image every 2 seconds
     }
 
     function reset_animation() {
