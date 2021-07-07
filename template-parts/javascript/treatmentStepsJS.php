@@ -7,6 +7,7 @@
             if ($(this).is('.active')) {
                 return false;
             }
+            console.log("inside treatmentStep JS main function")
         });
 
         var fixmeTop = $('.treatment_step_progress_bar_section').offset().top; // get initial position of the element
@@ -21,10 +22,12 @@
                     top: '150px',
                     left: '0'
                 });
+                console.log("added fix position")
             } else { // apply position: static
                 $('.treatment_step_progress_bar_section').css({ // if you scroll above it
                     position: 'static'
                 });
+                console.log("else position")
             }
 
         });
