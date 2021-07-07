@@ -47,7 +47,6 @@
     window.onload = function() {
         const slides = document.querySelectorAll('.treatment_step_carousel_element');
         slides[0].classList.add('active');
-        console.log("added active class to first element on page load")
     };
 
     jQuery(document).ready(function($) {
@@ -58,6 +57,7 @@
 
         let slideNumber = 0;
 
+        // Next Button
         nextBtn.addEventListener("click", () => {
             slides.forEach((slide) => {
                 slide.classList.remove("active");
@@ -70,10 +70,12 @@
             }
 
             slides[slideNumber].classList.add("active");
+            clearInterval(playSlider);
+            repeater();
             reset_animation();
-            console.log("clicked next button")
         });
 
+        // Prev Button
         prevBtn.addEventListener("click", () => {
             slides.forEach((slide) => {
                 slide.classList.remove("active");
@@ -86,8 +88,10 @@
             }
 
             slides[slideNumber].classList.add("active");
+            clearInterval(playSlider);
+            repeater();
             reset_animation();
-            console.log("clicked prev button")
+
         });
 
         //image slider autoplay
@@ -113,7 +117,6 @@
 
         function reset_animation() {
             document.querySelector('animate').beginElement();
-            console.log("animation has been reset")
         }
     });
 </script>
