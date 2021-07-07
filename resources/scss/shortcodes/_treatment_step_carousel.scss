@@ -6,7 +6,7 @@
       display: none;
       flex-direction: column;
       height: 100%;
-      &.active {
+      &.activeSlide {
         display: flex;
       }
       .treatment_step_carousel_element_content {
