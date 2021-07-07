@@ -7,7 +7,7 @@
                 <?php
                 while (have_rows('treatment_steps', 'option')) : the_row();
                 ?>
-                    <div class="treatment_step_carousel_element fade">
+                    <div class="treatment_step_carousel_element active fade">
                         <div class="treatment_step_carousel_element_content">
                             <h4><?php echo get_sub_field('step_subheadline', 'option') ?></h4>
                             <h3><?php echo get_sub_field('step_headline', 'option') ?></h3>
@@ -20,8 +20,8 @@
                     </div>
                 <?php endwhile; ?>
 
-                <div class="treatment_step_carousel_buttons prev">
-                    <div class="treatment_step_carousel_button">
+                <div class="treatment_step_carousel_buttons">
+                    <div class="treatment_step_carousel_button prev">
                         <svg style="max-height:100px;" version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" xml:space="preserve">
                             <circle cx="50" cy="50" r="40" stroke="grey" stroke-width="3" fill="none" />
                         </svg>
@@ -90,7 +90,6 @@
                 console.log("inside play slider")
                 slides.forEach((slide) => {
                     slide.classList.remove("active");
-                    slides.first().addClass("active");
                 });
 
                 slideNumber++;
