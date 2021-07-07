@@ -89,7 +89,7 @@
             console.log("inside play slider")
             slides.forEach((slide) => {
                 slide.classList.remove("active");
-                slide[0].classList.add("active")
+                slides[0].classList.add("active")
             });
 
             slideNumber++;
