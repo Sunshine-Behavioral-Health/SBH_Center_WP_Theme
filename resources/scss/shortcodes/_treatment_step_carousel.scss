@@ -13,6 +13,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        justify-content: center;
         h3 {
           margin: 0 0 15px 50px;
         }
@@ -48,6 +49,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 50%;
+        height: 100%;
       }
     }
     .treatment_step_carousel_arrows {
@@ -89,16 +91,29 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 15px;
     .treatment_step_carousel_button {
       position: relative;
       width: 100px;
+
+      svg {
+        circle.inner_circle {
+          stroke: var(--primary_color);
+        }
+      }
+
+      svg {
+        circle.animated_circle {
+          stroke: var(--secondary_color);
+        }
+      }
     }
   }
   .prev_arrow,
   .next_arrow {
     cursor: pointer;
     position: absolute;
-    top: 42.5%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: auto;
@@ -157,6 +172,9 @@
   .custom_carousel {
     .treatment_step_carousel_buttons {
       justify-content: flex-start;
+      position: absolute;
+      bottom: 0;
+      margin-top: 0;
     }
   }
 }
