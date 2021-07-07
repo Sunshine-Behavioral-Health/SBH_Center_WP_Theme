@@ -7,7 +7,7 @@
                 <?php
                 while (have_rows('treatment_steps', 'option')) : the_row();
                 ?>
-                    <div class="treatment_step_carousel_element active fade">
+                    <div class="treatment_step_carousel_element fade">
                         <div class="treatment_step_carousel_element_content">
                             <h4><?php echo get_sub_field('step_subheadline', 'option') ?></h4>
                             <h3><?php echo get_sub_field('step_headline', 'option') ?></h3>
@@ -44,6 +44,12 @@
 </section>
 
 <script>
+    $(document).ready(function() {
+        const slides = document.querySelectorAll('.treatment_step_carousel_element');
+        slides[0].addClass('active');
+        console.log("added active class to first element on page load")
+    });
+
     jQuery(document).ready(function($) {
         const prevBtn = document.querySelector('.prev');
         const nextBtn = document.querySelector('.next');
@@ -98,9 +104,8 @@
                 }
 
                 slides[slideNumber].classList.add("active");
-            }, 4000);
-
-            reset_animation();
+                reset_animation();
+            }, 7000);
         }
         repeater();
 
