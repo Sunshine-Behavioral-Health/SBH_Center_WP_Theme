@@ -109,6 +109,10 @@
     animation-name: fade;
     animation-duration: 2s;
   }
+
+  .active {
+    display: flex;
+  }
   @-webkit-keyframes fade {
     from {
       opacity: 0.4;

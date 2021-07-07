@@ -44,52 +44,17 @@
 </section>
 
 <script>
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
-    const slides = document.querySelectorAll('.treatment_step_carousel_element');
-    const numberOfSlides = slides.length;
+    jQuery(document).ready(function($) {
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        const slides = document.querySelectorAll('.treatment_step_carousel_element');
+        const numberOfSlides = slides.length;
 
-    let slideNumber = 0;
+        let slideNumber = 0;
 
-    nextBtn.addEventListener("click", () => {
-        console.log("clicked next button")
-        slides.forEach((slide) => {
-            slide.classList.remove("active");
-        });
-
-        slideNumber++;
-
-        if (slideNumber > (numberOfSlides - 1)) {
-            slideNumber = 0;
-        }
-
-        slides[slideNumber].classList.add("active");
-    });
-
-    prevBtn.addEventListener("click", () => {
-        console.log("clicked prev button")
-        slides.forEach((slide) => {
-            slide.classList.remove("active");
-        });
-
-        slideNumber--;
-
-        if (slideNumber < 0) {
-            slideNumber = numberOfSlides - 1;
-        }
-
-        slides[slideNumber].classList.add("active");
-    });
-
-    //image slider autoplay
-    let playSlider;
-
-    let repeater = () => {
-        playSlider = setInterval(function() {
-            console.log("inside play slider")
+        nextBtn.addEventListener("click", () => {
             slides.forEach((slide) => {
                 slide.classList.remove("active");
-                slides[0].classList.add("active")
             });
 
             slideNumber++;
@@ -99,18 +64,52 @@
             }
 
             slides[slideNumber].classList.add("active");
-            console.log("almost end of playslider")
-        }, 4000);
-        console.log("end of playSlider")
+            console.log("clicked next button")
+        });
 
-        //reset_animation();
-    }
-    repeater();
+        prevBtn.addEventListener("click", () => {
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
 
+            slideNumber--;
 
+            if (slideNumber < 0) {
+                slideNumber = numberOfSlides - 1;
+            }
 
-    function reset_animation() {
-        document.querySelector('animate').beginElement();
-        console.log("animation has been reset")
-    }
+            slides[slideNumber].classList.add("active");
+            console.log("clicked prev button")
+        });
+
+        //image slider autoplay
+        let playSlider;
+
+        let repeater = () => {
+            playSlider = setInterval(function() {
+                console.log("inside play slider")
+                slides.forEach((slide) => {
+                    slide.classList.remove("active");
+                    slides.first().addClass("active");
+                });
+
+                slideNumber++;
+
+                if (slideNumber > (numberOfSlides - 1)) {
+                    slideNumber = 0;
+                }
+
+                slides[slideNumber].classList.add("active");
+                console.log("almost end of playslider")
+            }, 4000);
+
+            reset_animation();
+        }
+        repeater();
+
+        function reset_animation() {
+            document.querySelector('animate').beginElement();
+            console.log("animation has been reset")
+        }
+    });
 </script>
