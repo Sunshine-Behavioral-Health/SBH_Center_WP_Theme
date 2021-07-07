@@ -46,7 +46,7 @@
 <script>
     window.onload = function() {
         const slides = document.querySelectorAll('.treatment_step_carousel_element');
-        slides[0].addClass('active');
+        slides[0].classList.add('active');
         console.log("added active class to first element on page load")
     };
 
@@ -70,6 +70,7 @@
             }
 
             slides[slideNumber].classList.add("active");
+            reset_animation();
             console.log("clicked next button")
         });
 
@@ -85,6 +86,7 @@
             }
 
             slides[slideNumber].classList.add("active");
+            reset_animation();
             console.log("clicked prev button")
         });
 
