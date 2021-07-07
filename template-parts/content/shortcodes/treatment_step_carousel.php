@@ -60,7 +60,6 @@
     function showSlides(n) {
         let i;
         let slides = document.getElementsByClassName("treatment_step_carousel_element");
-        console.log("elements I want", slides)
         if (n > slides.length) {
             slideIndex = 1
         }
@@ -71,6 +70,23 @@
             slides[i].style.display = "none";
         }
         slides[slideIndex - 1].style.display = "flex";
+    }
+
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("treatment_step_carousel_element");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "flex";
+        setTimeout(showSlides, 3000); // Change image every 2 seconds
     }
 
     function reset_animation() {
