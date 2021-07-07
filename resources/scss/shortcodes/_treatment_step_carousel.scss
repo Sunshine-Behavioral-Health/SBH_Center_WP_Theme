@@ -14,10 +14,10 @@
         flex-direction: column;
         width: 100%;
         h3 {
-          margin: 0 0 25px 0;
+          margin: 0 0 25px 50px;
         }
         h4 {
-          margin: 0 0 25px 0;
+          margin: 0 0 25px 50px;
           text-transform: uppercase;
           font-size: 10px;
           font-weight: 500;
@@ -26,15 +26,19 @@
           letter-spacing: calc(0.35vw + 1.75px);
         }
         p {
-          margin: 0 0 25px 0;
+          margin: 0 0 25px 50px;
           line-height: calc(0.5vw + 20px);
         }
         a {
-          margin: 0 0 25px 0;
+          margin: 0 0 25px 50px;
           padding-right: 20px;
           display: flex;
           flex-direction: row;
           cursor: pointer;
+          color: var(--primary_color);
+          img {
+            margin-left: 5px;
+          }
           &:hover img {
             margin-left: 15px;
           }
@@ -42,9 +46,8 @@
       }
       .treatment_step_carousel_element_image {
         width: 100%;
-        img {
-          width: 100%;
-        }
+        background-size: cover;
+        background-position: 50%;
       }
     }
     .treatment_step_carousel_arrows {
@@ -78,9 +81,9 @@
   }
 
   .treatment_step_carousel_wrapper {
-    width: 1200px;
+    width: 100%;
     position: relative;
-    margin: -10px;
+    padding: 15px;
   }
 
   .treatment_step_carousel_buttons {
