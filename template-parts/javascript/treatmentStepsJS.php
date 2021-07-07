@@ -1,5 +1,7 @@
 <script>
+    console.log("inside treatmentStep JS outside of jquery")
     jQuery(document).ready(function($) {
+        console.log("inside treatment step Js at top of ready")
         $('.step').each(function(index, element) {
             // element == this
             $(element).not('.active').addClass('done');
