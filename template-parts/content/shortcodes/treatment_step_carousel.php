@@ -87,7 +87,6 @@
 
         let repeater = () => {
             playSlider = setInterval(function() {
-                console.log("inside play slider")
                 slides.forEach((slide) => {
                     slide.classList.remove("active");
                 });
@@ -99,7 +98,6 @@
                 }
 
                 slides[slideNumber].classList.add("active");
-                console.log("almost end of playslider")
             }, 4000);
 
             reset_animation();

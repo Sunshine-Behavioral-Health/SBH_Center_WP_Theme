@@ -3,9 +3,12 @@
   .treatment_step_carousel_container {
     padding: 15px;
     .treatment_step_carousel_element {
-      // display: none;
+      display: none;
       flex-direction: column;
       height: 100%;
+      &.active {
+        display: flex;
+      }
       .treatment_step_carousel_element_content {
         display: flex;
         flex-direction: column;
@@ -108,10 +111,6 @@
     -webkit-animation-duration: 2s;
     animation-name: fade;
     animation-duration: 2s;
-  }
-
-  .active {
-    display: flex;
   }
   @-webkit-keyframes fade {
     from {
