@@ -44,11 +44,11 @@
 </section>
 
 <script>
-    $(document).ready(function() {
+    window.onload = function() {
         const slides = document.querySelectorAll('.treatment_step_carousel_element');
         slides[0].addClass('active');
         console.log("added active class to first element on page load")
-    });
+    };
 
     jQuery(document).ready(function($) {
         const prevBtn = document.querySelector('.prev');
