@@ -1,6 +1,7 @@
 <?php
 function treatment_step_progress_bar($atts)
 {
+
     $atts = shortcode_atts(
         array(
             'step' => ''
@@ -27,6 +28,11 @@ function treatment_step_progress_bar($atts)
     $output .= '</div>';
     $output .= '</div>';
     $output .= '</section>';
+
+    ob_start();
+    get_template_part('template-parts/javascript/treatmentStepsJS');
+    $output .= ob_get_clean();
+
     return $output;
 }
 

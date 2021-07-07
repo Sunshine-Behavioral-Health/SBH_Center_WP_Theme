@@ -14,7 +14,6 @@ namespace WP_Rig\WP_Rig;
 get_header();
 get_template_part('template-parts/javascript/navigationJs');
 get_template_part('template-parts/javascript/expandableRowsShortcodeJs');
-get_template_part('template-parts/javascript/treatmentStepsJS');
 
 sbh_center()->print_styles('sbh_center-custom-page-nosidebar', 'sbh_center-content');
 
