@@ -13,6 +13,7 @@ namespace WP_Rig\WP_Rig;
 
 get_header();
 get_template_part('template-parts/javascript/navigationJs');
+get_template_part('template-parts/javascript/expandableRowsShortcodeJs');
 
 
 $centerValue = get_field('site_name', 'option');
@@ -33,35 +34,13 @@ $centerValue = get_field('site_name', 'option');
                     </div>
 
                     <div class="about_page_location_iframe_wrapper">
-                        <?php if ($centerValue == "Chapters Capistrano") : ?>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.724328088017!2d-117.63236908449115!3d33.43043075768753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcf40f3530b4cd%3A0xe9dceac46fd44fd4!2s1525%20Buena%20Vista%2C%20San%20Clemente%2C%20CA%2092672!5e0!3m2!1sen!2sus!4v1619809011507!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                            <div class="about_page_location_address" style="background-color: var(--chapters_primary);">
-                                <a href="https://www.google.com/maps/place/1525+Buena+Vista,+San+Clemente,+CA+92672/@33.4304308,-117.6323691,17z/data=!3m1!4b1!4m5!3m4!1s0x80dcf40f3530b4cd:0xe9dceac46fd44fd4!8m2!3d33.4304263!4d-117.6301804"><span>Address: </span>1525 Buena Vista, San Clemente, CA 92672</a>
-                            </div>
-                        <?php elseif ($centerValue == "Monarch Shores") : ?>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.0664989986176!2d-117.6580030844899!3d33.499646954094324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcf1efd1bb11f7%3A0x521f70a0edb1c6b5!2s27123%20Calle%20Arroyo%20%232121%2C%20San%20Juan%20Capistrano%2C%20CA%2092675!5e0!3m2!1sen!2sus!4v1619809037054!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-                            <div class="about_page_location_address" style="background-color: var(--monarch_primary);">
-                                <a href="https://www.google.com/maps/place/27123+Calle+Arroyo+%232121,+San+Juan+Capistrano,+CA+92675/@33.499647,-117.6580031,17z/data=!3m1!4b1!4m5!3m4!1s0x80dcf1efd1bb11f7:0x521f70a0edb1c6b5!8m2!3d33.4996425!4d-117.6558144"><span>Address: </span>27123 Calle Arroyo #2121, San Juan Capistrano, CA 92675</a>
-                            </div>
-                        <?php elseif ($centerValue == "Mountain Springs") : ?>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3096.4226461415133!2d-104.86456988437968!3d39.09684684276736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876cade5e7b20a25%3A0x1e60b73ef75cbe49!2s1865%20Woodmoor%20Dr%2C%20Monument%2C%20CO%2080132!5e0!3m2!1sen!2sus!4v1619809190008!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-                            <div class="about_page_location_address" style="background-color: var(--mountain_primary);">
-                                <a href="https://www.google.com/maps/place/1865+Woodmoor+Dr,+Monument,+CO+80132/@39.0968468,-104.8645699,17z/data=!3m1!4b1!4m5!3m4!1s0x876cade5e7b20a25:0x1e60b73ef75cbe49!8m2!3d39.0968427!4d-104.8623812"><span>Address: </span>1865 Woodmor Monument, CO 80132</a>
-                            </div>
-                        <?php elseif ($centerValue == "Willow Springs") : ?>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3449.9826650436426!2d-97.22942738454705!3d30.151911620442053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86448f838b5d2377%3A0x2c75933c9fdd6b23!2s1128%20TX-21%2C%20Bastrop%2C%20TX%2078602!5e0!3m2!1sen!2sus!4v1619809147810!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-                            <div class="about_page_location_address" style="background-color: var(--willow_primary);">
-                                <a href="https://www.google.com/maps/place/Willow+Springs+Recovery+-+Inpatient+Drug+and+Alcohol+Rehab,+Texas+Rehab,+Dual+Diagnosis+Treatment+Center/@30.151904,-97.227223,15z/data=!4m5!3m4!1s0x0:0x8ef094c9da9bd044!8m2!3d30.151904!4d-97.227223"><span>Address: </span>1128 TX-21, Bastrop, TX 78602</a>
-                            </div>
-                        <?php endif; ?>
+                        <img src="<?php echo get_field('about_page_center_drawn_image')['url'] ?>" alt="" class="about_page_center_image">
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- List Items -->
         <section class="about_page_treatment_list_section">
             <div class="about_page_treatment_list_container">
                 <h2><?php echo get_field('about_page_treatment_list_items_headline') ?></h2>
@@ -71,7 +50,7 @@ $centerValue = get_field('site_name', 'option');
                         while (have_rows('about_page_treatment_list_items')) : the_row();
                     ?>
                             <li>
-                                <img src="<?php echo get_template_directory_uri() . '/images/icons/checkmark_icon.png' ?>" alt="" loading="lazy"> <?php echo get_sub_field('text') ?>
+                                <img src="<?php echo get_template_directory_uri() . '/icons/checkmark_icon.png' ?>" alt="" loading="lazy"> <?php echo get_sub_field('text') ?>
                             </li>
                     <?php
                         endwhile;
@@ -86,7 +65,7 @@ $centerValue = get_field('site_name', 'option');
         <section class="about_page_testimonial_section">
             <div class="about_page_badge_container">
                 <h2>Our Accreditation</h2>
-                <div class="ceneter_page_badges_wrapper">
+                <div class="center_page_badges_wrapper">
                     <?php echo get_field('legitscript_html', 'option') ?>
 
                     <?php
@@ -103,7 +82,7 @@ $centerValue = get_field('site_name', 'option');
             <div class="about_page_testimonial_container">
                 <p><?php echo get_field('about_page_testimonial') ?></p>
                 <p><?php echo get_field('about_page_testimonial_name') ?></p>
-                <img src="<?php echo get_template_directory_uri() . '/images/icons/five_stars.png' ?>" alt="" loading="lazy">
+                <img src="<?php echo get_template_directory_uri() . '/icons/five_stars.png' ?>" alt="" loading="lazy">
             </div>
         </section>
 
@@ -117,7 +96,7 @@ $centerValue = get_field('site_name', 'option');
                             <div class="expandable_row_element">
                                 <div class="expandable_row_element_headline_img_wrapper">
                                     <h5><?php echo get_sub_field('headline') ?></h5>
-                                    <img src="<?php echo get_template_directory_uri() . '/images/icons/plus_icon_blue.png' ?>" alt="">
+                                    <img src="<?php echo get_field('plus_icon', 'option')['url'] ?>" alt="">
                                 </div>
 
                                 <div class="expandable_row_content hide">
@@ -130,43 +109,17 @@ $centerValue = get_field('site_name', 'option');
                     endif;
                     ?>
                 </div>
-                <?php if ($centerValue == "Chapters Capistrano") : ?>
-                    <img src="<?php echo get_template_directory_uri() . '/images/chapters-min.jpg' ?>" alt="" loading="lazy">
+                <img src="<?php echo get_template_directory_uri() . '/chapters-min.jpg' ?>" alt="" loading="lazy">
+            </div>
 
-                <?php elseif ($centerValue == "Monarch Shores") : ?>
-                    <img src="<?php echo get_template_directory_uri() . '/images/monarch-min.jpg' ?>" alt="" loading="lazy">
 
-                <?php elseif ($centerValue == "Mountain Springs") : ?>
-                    <img src="<?php echo get_template_directory_uri() . '/images/mountain-min.jpg' ?>" alt="" loading="lazy">
-                <?php
-                elseif ($centerValue == "Willow Springs") : ?>
-                    <img src="<?php echo get_template_directory_uri() . '/images/willow-min.jpg' ?>" alt="" loading="lazy">
-                <?php endif; ?>
+            <iframe src="<?php echo get_field('about_page_iframe') ?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
+            <div class="about_page_location_address">
+                <a href="<?php echo get_field('about_page_iframe') ?>"><span>Address: </span>27123 Calle Arroyo #2121, San Juan Capistrano, CA 92675</a>
             </div>
         </section>
 
-        <section class="about_page_insurance_form_section" style="background-image: url(<?php echo get_field('about_page_insurance_section_background_image')['url'] ?>)">
-            <div class="about_page_insurance_form_container">
-                <div class="about_page_insurance_form_content_wrapper">
-                    <div class="about_page_insurance_form_top_cta_container hide_on_tablet hide_on_desktop">
-                        <?php $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
-                        <a href="<?php echo $actual_link; ?>#center_insurance_form">Verify Insurance for <?php if ($centerValue == "Chapters Capistrano") echo "Chapters Capistrano";
-                                                                                                            elseif ($centerValue == "Monarch Shores") echo "Monarch Shores";
-                                                                                                            elseif ($centerValue == "Mountain Springs") echo "Mountain Springs";
-                                                                                                            elseif ($centerValue == "Willow Springs") echo "Willow Springs"; ?></a>
-                    </div>
-                    <?php echo get_field('about_page_insurance_content') ?>
-                </div>
-                <div id="center_insurance_form" class="about_page_insurance_form_wrapper">
-                    <div class="about_page_insurance_form_wrapper">
-                        <div class="insurance_page_form_container">
-                            <?php echo do_shortcode('[gravityform id="7" title="false" description="false"]') ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
 </main> <?php
         get_footer();
