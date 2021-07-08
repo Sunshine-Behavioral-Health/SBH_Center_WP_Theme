@@ -13,9 +13,7 @@ namespace WP_Rig\WP_Rig;
 
 get_header();
 get_template_part('template-parts/javascript/navigationJs');
-get_template_part('template-parts/javascript/expandableRowsShortcodeJs');
 
-sunshine_behavioral_health()->print_styles('sunshine_behavioral_health-custom-page-nosidebar', 'sunshine_behavioral_health-content');
 
 $centerValue = get_field('site_name', 'option');
 
