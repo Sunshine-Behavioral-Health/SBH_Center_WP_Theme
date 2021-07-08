@@ -82,33 +82,22 @@ $centerValue = get_field('site_name', 'option');
         </section>
 
 
+
         <section class="about_page_testimonial_section">
             <div class="about_page_badge_container">
                 <h2>Our Accreditation</h2>
                 <div class="ceneter_page_badges_wrapper">
-                    <?php if ($centerValue == "Chapters Capistrano") : ?>
-                        <a href="https://legitscript.com/pharmacy/chapterscapistrano.com" class="legit_script_wrapper" title="Verify LegitScript Approval">
-                            <img src="https://static.legitscript.com/seals/3380243.png" alt="LegitScript approved" loading="lazy" width="140" height="100" />
-                        </a>
-                        <img src="<?php echo get_template_directory_uri() . '/images/gold_badge.png' ?>" alt="" loading="lazy">
-                    <?php elseif ($centerValue == "Monarch Shores") : ?>
-                        <a href="https://legitscript.com/pharmacy/monarchshores.com" class="legit_script_wrapper" title="Verify LegitScript Approval">
-                            <img src="https://static.legitscript.com/seals/3380081.png" alt="LegitScript approved" loading="lazy" width="140" height="100" />
-                        </a>
-                        <img src="<?php echo get_template_directory_uri() . '/images/gold_badge.png' ?>" alt="" loading="lazy">
-                    <?php elseif ($centerValue == "Mountain Springs") : ?>
-                        <a href="https://www.legitscript.com/websites/mountainspringsrecovery.com/" class="legit_script_wrapper" title="Verify LegitScript Approval">
-                            <img src="https://static.legitscript.com/seals/4466021.png" alt="LegitScript approved" loading="lazy" />
-                        </a>
-                        <img src="<?php echo get_template_directory_uri() . '/images/gold_badge.png' ?>" alt="" loading="lazy">
-                        <img src="<?php echo get_template_directory_uri() . '/images/colorado_springs_badge.png' ?>" alt="" loading="lazy">
-                    <?php elseif ($centerValue == "Willow Springs") : ?>
-                        <a href="https://legitscript.com/pharmacy/willowspringsrecovery.com/" class="legit_script_wrapper" title="Verify LegitScript Approval">
-                            <img src="https://static.legitscript.com/seals/3380258.png" alt="LegitScript approved" loading="lazy" width="140" height="100" />
-                        </a>
-                        <img src="<?php echo get_template_directory_uri() . '/images/gold_badge.png' ?>" alt="" loading="lazy">
-                        <img src="<?php echo get_template_directory_uri() . '/images/austin_texas_badge.jpg' ?>" alt="" loading="lazy">
-                    <?php endif; ?>
+                    <?php echo get_field('legitscript_html', 'option') ?>
+
+                    <?php
+                    if (have_rows('footer_badges', 'option')) :
+                        while (have_rows('footer_badges', 'option')) : the_row();
+                    ?>
+                            <img loading="lazy" src="<?php echo get_sub_field('badge', 'option')['url']; ?>" alt="">
+                    <?php
+                        endwhile;
+                    endif;
+                    ?>
                 </div>
             </div>
             <div class="about_page_testimonial_container">

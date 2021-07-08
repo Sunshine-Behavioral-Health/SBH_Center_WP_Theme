@@ -50,6 +50,7 @@
         flex-direction: row;
         .recommendations_repeater_element {
           flex: 0 1 30%;
+          align-items: baseline;
         }
       }
     }
