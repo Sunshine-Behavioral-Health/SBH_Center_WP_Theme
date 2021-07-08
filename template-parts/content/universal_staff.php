@@ -9,7 +9,6 @@ if (is_page_template('staff.php')) : ?>
                         <div class="staff_card_wrapper">
                             <div class="staff_card_image">
                                 <img src="<?php echo get_sub_field('staff_image')['url'] ?>" alt="">
-
                             </div>
                             <div class="staff_card_content">
                                 <h5 class="staff_name"><?php echo get_sub_field('staff_name'); ?></h5>
