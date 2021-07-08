@@ -11,7 +11,7 @@
                         </div>
                         <div class="staff_card_content">
                             <h5 class="staff_name"><?php echo get_sub_field('staff_name'); ?></h5>
-                            <h6><?php echo get_sub_field('staff_title', 'option'); ?></h6>
+                            <h6 class="staff_title"><?php echo get_sub_field('staff_title', 'option'); ?></h6>
                             <p><?php echo get_sub_field('staff_team', 'option') ?></p>
                             <?php if (get_sub_field('staff_bio')) : ?>
                                 <button class="read_more_button" type="button" data-toggle="collapse" data-target="#staff_bio<?php echo get_sub_field('card_number') ?>" aria-expanded="false" aria-controls="staff_bio<?php echo get_sub_field('card_number', 'option') ?>">Read Bio</button>
