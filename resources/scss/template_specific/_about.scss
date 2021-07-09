@@ -127,6 +127,9 @@
   .about_page_location_wrapper
   .about_page_location_iframe_wrapper {
   width: 100%;
+  img {
+    margin: 0 auto;
+  }
 }
 
 .about_page_location_iframe_wrapper iframe {
@@ -418,7 +421,8 @@
     justify-content: space-between;
   }
   .about_page_expandable_row_wrapper,
-  .about_page_expandable_row_container img {
+  .about_page_expandable_row_container
+    .about_page_expandable_row_location_container {
     width: 45%;
   }
   .about_page_insurance_form_container {

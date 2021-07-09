@@ -25,6 +25,7 @@ $centerValue = get_field('site_name', 'option');
     <?php get_template_part('template-parts/heros/desktop_and_mobile_hero_full_width_center'); ?>
 
     <div class="content_container">
+        <!-- Content Left Drawing Right -->
         <section class="about_page_location_section">
             <div class="about_page_location_container">
                 <h2><?php echo get_field('about_page_-_location_headline') ?></h2>
@@ -40,7 +41,7 @@ $centerValue = get_field('site_name', 'option');
             </div>
         </section>
 
-        <!-- List Items -->
+        <!-- Treatment List -->
         <section class="about_page_treatment_list_section">
             <div class="about_page_treatment_list_container">
                 <h2><?php echo get_field('about_page_treatment_list_items_headline') ?></h2>
@@ -60,8 +61,7 @@ $centerValue = get_field('site_name', 'option');
             </div>
         </section>
 
-
-
+        <!-- Accreditation and Testimonial -->
         <section class="about_page_testimonial_section">
             <div class="about_page_badge_container">
                 <h2>Our Accreditation</h2>
@@ -86,6 +86,7 @@ $centerValue = get_field('site_name', 'option');
             </div>
         </section>
 
+        <!-- Expandable Rows and Location iframe -->
         <section class="about_page_expandable_row_section">
             <div class="about_page_expandable_row_container">
                 <div class="about_page_expandable_row_wrapper">
@@ -109,17 +110,18 @@ $centerValue = get_field('site_name', 'option');
                     endif;
                     ?>
                 </div>
-                <img src="<?php echo get_template_directory_uri() . '/chapters-min.jpg' ?>" alt="" loading="lazy">
-            </div>
+                <div class="about_page_expandable_row_location_container">
+                    <iframe src="<?php echo get_field('about_page_iframe') ?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
-
-            <iframe src="<?php echo get_field('about_page_iframe') ?>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-            <div class="about_page_location_address">
-                <a href="<?php echo get_field('about_page_iframe') ?>"><span>Address: </span>27123 Calle Arroyo #2121, San Juan Capistrano, CA 92675</a>
+                    <div class="about_page_location_address">
+                        <a href="<?php echo get_field('about_page_iframe') ?>"><span>Address: </span>27123 Calle Arroyo #2121, San Juan Capistrano, CA 92675</a>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- Treatment Step Carousel
+        <?php echo do_shortcode('[treatment_step_carousel]') ?>
     </div>
 </main> <?php
         get_footer();
