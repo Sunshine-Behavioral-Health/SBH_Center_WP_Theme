@@ -21,6 +21,7 @@ get_template_part('template-parts/javascript/navigationJs');
 
 ?>
 
+
 <?php get_template_part('template-parts/content/googleTranslate'); ?>
 
 <main id="primary" class="">
@@ -46,6 +47,7 @@ get_template_part('template-parts/javascript/navigationJs');
 			<!-- Page Content -->
 			<section class="page_content list_styling ">
 				<?php echo get_field('content') ?>
+				<?php echo get_field('michelle_image')['url'] ?>
 			</section>
 
 			<!-- Sources -->
