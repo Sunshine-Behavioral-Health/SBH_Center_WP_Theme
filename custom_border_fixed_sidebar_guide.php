@@ -23,7 +23,7 @@ get_template_part('template-parts/javascript/fixedSidebarJs');
 
 <?php get_template_part('template-parts/content/googleTranslate'); ?>
 
-<main id="primary" class="site-main has_sidebar_border">
+<main id="primary" class="site-main has_sidebar_border guide_main">
 	<div class="page_wrapper">
 		<div class="page_image">
 			<img class="page_desktop_image hero_image hide_on_mobile show_on_tablet" src="<?php echo get_field('desktop_image')['url']; ?>">

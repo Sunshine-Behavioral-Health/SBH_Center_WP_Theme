@@ -1,0 +1,15 @@
+.guide_main {
+  .page_image {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .guide_main {
+    .hero_subheadline {
+      color: #000;
+    }
+  }
+}
