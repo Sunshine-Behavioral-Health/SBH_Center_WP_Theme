@@ -277,17 +277,23 @@ h5 {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  .about_page_expandable_row_location_container {
-    .about_page_location_address {
-      background-color: var(--primary_color);
-      padding: 15px;
-      a {
-        color: rgb(78, 33, 33);
-        span {
-          font-weight: 700;
-        }
+}
+
+.about_page_expandable_row_location_container {
+  .about_page_location_address {
+    background-color: var(--primary_color);
+    padding: 15px;
+    a {
+      color: rgb(78, 33, 33);
+      span {
+        font-weight: 700;
       }
     }
+  }
+
+  iframe {
+    width: 100% !important;
+    height: 250px !important;
   }
 }
 
