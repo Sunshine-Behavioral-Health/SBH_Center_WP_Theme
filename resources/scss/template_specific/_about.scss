@@ -95,6 +95,9 @@
   min-width: 185px;
   max-width: 250px;
   margin: 0 auto;
+  &:hover {
+    background-color: var(--tertiary_color);
+  }
 }
 
 .about_page .about_page_hero_wrapper .about_page_hero_content_wrapper a:hover {
