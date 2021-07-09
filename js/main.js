@@ -1,4 +1,5 @@
 
+
 // function validateFooterForm() {
 //   let e = document.querySelector(".footer_form_fn").value,
 //     t = document.querySelector(".footer_form_ln").value,

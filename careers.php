@@ -22,28 +22,17 @@ get_template_part('template-parts/javascript/navigationJs');
 
 <?php get_template_part('template-parts/content/googleTranslate'); ?>
 
-<main id="primary" class="maxWidth">
-	<div class="custom_page_noSideBar_wrapper">
-		<div class="page_image">
-			<img class="page_desktop_image hero_image hide_on_mobile show_on_tablet" src="<?php echo get_field('desktop_image')['url']; ?>">
-			<img class="page_mobile_image hero_image hide_on_desktop hide_on_tablet" src="<?php echo get_field('mobile_image')['url']; ?>">
-			<div class="page_mobile_image_text_and_cta_container">
-				<h1><?php echo get_field('page_headline') ?></h1>
-				<p class="hero_subheadline"><?php echo get_field('page_subheadline_paragraph') ?></p>
-			</div>
-		</div>
+<main id="primary" class="careers_template">
+	<?php get_template_part('template-parts/heros/desktop_and_mobile_hero_full_width'); ?>
 
-
-
-		<div class="hide_on_mobile">
-			<h1><?php echo get_field('page_headline') ?></h1>
-			<p class="hero_subheadline"><?php echo get_field('page_subheadline_paragraph') ?></p>
-		</div>
-
-		<div class="page_content_below_image">
-			<section class="page_content list_styling ">
+	<div class="content_container">
+		<div class="page_wrapper">
+			<!-- Page Content -->
+			<section class="page_content list_styling">
+				<?php get_template_part('template-parts/content/googleTranslate'); ?>
 				<?php echo get_field('content') ?>
 			</section>
+
 			<section class="career_section">
 				<?php if (get_field('career_headline')) : ?>
 					<h2><?php echo get_field('career_headline') ?></h2>
@@ -74,7 +63,7 @@ get_template_part('template-parts/javascript/navigationJs');
 								<p class="position_summary">Position Summary:</p>
 								<p><?php echo get_sub_field('job_content'); ?></p>
 								<div class="job_apply_now">
-									<a href="<?php echo get_sub_field('apply_link') ?>">Apply to <?php echo get_field('site_name', 'option') ?></a>
+									<a href="<?php echo get_sub_field('apply_link') ?>">Apply with <?php echo get_field('site_name', 'option') ?></a>
 								</div>
 							</div>
 					<?php
@@ -84,9 +73,8 @@ get_template_part('template-parts/javascript/navigationJs');
 				</div>
 			</section>
 		</div>
-
-
 	</div>
+
 </main>
 <?php
 get_footer();

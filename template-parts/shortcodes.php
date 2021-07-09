@@ -669,3 +669,35 @@ function staff_home()
 }
 
 add_shortcode('staff_home', 'staff_home');
+
+
+function recommendations()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/recommendations');
+	return ob_get_clean();
+}
+
+add_shortcode('recommendations', 'recommendations');
+
+
+function gallery()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/gallery');
+	return ob_get_clean();
+}
+
+add_shortcode('gallery', 'gallery');
+
+function treatment_step_carousel()
+{
+	ob_start();
+	get_template_part('template-parts/content/shortcodes/treatment_step_carousel');
+	return ob_get_clean();
+}
+
+add_shortcode('treatment_step_carousel', 'treatment_step_carousel');
+
+
+get_template_part('template-parts/content/shortcodes/treatment_step_progress_bar');
