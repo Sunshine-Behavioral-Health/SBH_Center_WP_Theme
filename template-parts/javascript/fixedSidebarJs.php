@@ -13,6 +13,7 @@
                     fixedSidebar.removeClass("fixedSidebarPositionFixed");
                 }
             });
+            console.log("all of fixedsidebar js has run")
         });
     });
 </script>
