@@ -22,7 +22,7 @@ $centerValue = get_field('site_name', 'option');
 
 
 <main id="primary" class="maxWidth about_page">
-    <?php get_template_part('template-parts/heros/desktop_and_mobile_hero_full_width_center'); ?>
+    <?php get_template_part('template-parts/heros/desktop_and_mobile_hero_full_width_about'); ?>
 
     <div class="content_container">
         <!-- Content Left Drawing Right -->
