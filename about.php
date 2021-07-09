@@ -120,7 +120,7 @@ $centerValue = get_field('site_name', 'option');
             </div>
         </section>
 
-        <!-- Treatment Step Carousel
+        <!-- Treatment Step Carousel -->
         <?php echo do_shortcode('[treatment_step_carousel]') ?>
     </div>
 </main> <?php
