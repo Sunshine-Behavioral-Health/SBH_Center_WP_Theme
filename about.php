@@ -65,7 +65,7 @@ $centerValue = get_field('site_name', 'option');
         <section class="about_page_testimonial_section">
             <div class="about_page_badge_container">
                 <h2>Our Accreditation</h2>
-                <div class="center_page_badges_wrapper">
+                <div class="about_page_badges_wrapper">
                     <?php echo get_field('legitscript_html', 'option') ?>
 
                     <?php

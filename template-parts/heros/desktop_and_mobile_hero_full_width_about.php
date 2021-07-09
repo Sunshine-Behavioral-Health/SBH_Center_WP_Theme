@@ -1,4 +1,4 @@
-<div class="desktop_and_mobile_hero_image_wrapper center_page_hero">
+<div class="desktop_and_mobile_hero_image_wrapper about_page_hero">
     <?php if (get_field('desktop_image')) : ?>
         <img class="page_desktop_image hero_image hide_on_mobile show_on_tablet" src="<?php echo get_field('desktop_image')['url']; ?>">
     <?php endif; ?>
@@ -16,7 +16,7 @@
                     <p class="hero_subheadline"><?php echo get_field('page_subheadline_paragraph') ?></p>
                 <?php endif; ?>
             <?php endif; ?>
-            <p class="center_page_hero_cta_top_text">Talk to an Intake Specialist</p>
+            <p class="about_page_hero_cta_top_text">Talk to an Intake Specialist</p>
             <a id="centerPageHeroPhone" class="invocaNumber centerPageHeroPhone" onclick="dataLayer.push({'event': 'phone_click', 'shortcode_type' : 'centerPageHeroPhone'});" href="tel:949-276-2886">949-276-2886</a>
         </div>
     </div>
